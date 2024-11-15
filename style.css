@@ -747,6 +747,8 @@ body {
     display: inline-block; /* Ensures text is inline-block for transition effects */
     opacity: 1; /* Ensure text is visible */
     visibility: visible; /* Ensure visibility stays on */
+    margin-bottom: 5px;
+
 }
 
 /* When the user interacts, change text */
@@ -754,6 +756,8 @@ body {
     opacity: 0; /* Fade out the text */
     transform: translateX(-100%); /* Slide the text out to the left */
     visibility: hidden; /* Hide text when animation is finished */
+    margin-bottom: 5px;
+
 }
 
 /* After fade-out, show the "Chat" text */
