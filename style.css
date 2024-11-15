@@ -274,7 +274,6 @@ body {
 }
 
 
-
 @keyframes drop {
     from {
         transform: translate(-3px, -150%);
@@ -631,19 +630,15 @@ body {
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
     .nav a {
         font-size: 4vw;
     }
 
     .heading h1 {
-        margin-top: 10px;
         font-size: 18vw;
         line-height: 1;
         letter-spacing: 0;
-    }
-     .from-btm h5 {
-        margin-top: 20px;
     }
 
     .heading .secondh1 {
