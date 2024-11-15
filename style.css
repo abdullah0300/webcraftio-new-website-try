@@ -647,6 +647,7 @@ body {
     }
 
     .heading h1 {
+        margin-top: 10px;
         font-size: 18vw;
         line-height: 1;
         letter-spacing: 0;
