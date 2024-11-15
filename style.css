@@ -272,6 +272,18 @@ body {
     animation: drop .4s linear;
     animation-delay: .2s;
 }
+/* General styles for all devices */
+.from-btm {
+    margin-top: 0;
+}
+
+/* Specific styles for mobile devices */
+@media (max-width: 768px) {
+    .from-btm {
+        margin-top: 10px;
+    }
+}
+
 
 @keyframes drop {
     from {
