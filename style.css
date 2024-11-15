@@ -272,17 +272,7 @@ body {
     animation: drop .4s linear;
     animation-delay: .2s;
 }
-/* General styles for all devices */
-.based {
-    margin-top: 0;
-}
 
-/* Specific styles for mobile devices */
-@media (max-width: 768px) {
-    .based {
-        margin-top: 100px;
-    }
-}
 
 
 @keyframes drop {
@@ -653,7 +643,7 @@ body {
         letter-spacing: 0;
     }
      .based {
-margin-top: 10px;
+        margin-top: 20px;
     }
 
     .heading .secondh1 {
