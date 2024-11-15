@@ -706,4 +706,45 @@ body {
         transform: translateX(100vw) translateY(100vh);
     }
 }
+.custom-chat-button {
+    position: fixed; /* Keeps the button fixed relative to the viewport */
+    right: 10px; /* 10px from the right side */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%); /* Fine-tuning to ensure it stays in the middle */
+    background-color: #ffffff; /* Button background color */
+    color: rgb(19, 16, 16); /* Text color */
+    padding: 10px 15px; /* Button padding */
+    border: none;
+    border-radius: 11px; /* Rounded corners */
+    font-size: 12px; /* Text size */
+    text-transform: uppercase; /* Uppercase text */
+    white-space: nowrap; /* Prevent text wrapping */
+    writing-mode: vertical-lr; /* Change this to make text face left */
+    text-align: center; /* Center the vertical text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+    z-index: 999; /* Ensures the button is above other elements */
+}
 
+/* Hover effect */
+.custom-chat-button:hover {
+    background-color: #ffffff; /* Slightly darker yellow */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .custom-chat-button {
+        font-size: 12px; /* Reduce font size for smaller screens */
+        padding: 10px 15px; /* Reduce padding for a more compact button */
+        right: 5px; /* Bring the button closer to the right edge */
+    }
+}
+
+/* Media query for very small screens like phones in portrait mode */
+@media (max-width: 400px) {
+    .custom-chat-button {
+        font-size: 10px; /* Further reduce font size */
+        padding: 8px 10px; /* Adjust padding for smaller buttons */
+        right: 5px; /* Ensure button stays close to the edge */
+    }
+}

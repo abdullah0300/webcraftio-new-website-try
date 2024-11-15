@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <button class="custom-chat-button">Chat with us, we are online!</button>
+
     <span class="intro">
         <h4> Welcome to WebCraftio</h4>
         <div></div>
@@ -83,7 +85,7 @@
     </div>
     <div class="small-headings">
         <div class="from-top">
-            <h3 class="from-top-ele">Click to Get a Free <a href="contact.html"> <span style="background-color: #fdb226;color: black;"> Free Quote </span></a></h3>
+            <h3 class="from-top-ele">Click to Get a Free <a href="#brevoConversationsExpanded"> <span style="background-color: #fdb226;color: black;"> Free Quote </span></a></h3>
         </div>
         <div class="from-top">
             <h3 href="" class="from-top-ele">Now and Jumpstart Your Business'</h3>
@@ -130,7 +132,8 @@
                            Whether you're looking to elevate your brand, grow your audience, or streamline your operations, 
                            we deliver tailored solutions with precision and flair. 
                         At WebCraftio, we don’t just build—we create, innovate, and inspire.</p>
-                    <a href="#">Let's talk</a>
+                    <a href="#brevoConversationsExpanded">Let's talk</a>
+                    <!-- Custom button anywhere on the page -->
                 </div>
             </div>
             <div class="subscribe">
@@ -161,6 +164,13 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://kit.fontawesome.com/9317aadbca.js" crossorigin="anonymous"></script>
     <!-- Brevo Conversations {literal} -->
+    <script>
+        window.BrevoConversationsSetup = {
+            customWidgetButton: '.custom-chat-button'
+    };
+    </script>
+    
+    <!-- Brevo Conversations widget code -->
 <script>
     (function(d, w, c) {
         w.BrevoConversationsID = '67375ddc49738fcbf206068f';
@@ -174,6 +184,7 @@
     })(document, window, 'BrevoConversations');
 </script>
 <!-- /Brevo Conversations {/literal} -->
+ 
     
     <script src="script.js"></script>
 
