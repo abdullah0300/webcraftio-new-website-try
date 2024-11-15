@@ -652,6 +652,9 @@ body {
         line-height: 1;
         letter-spacing: 0;
     }
+     .based {
+margin-top: 10px;
+    }
 
     .heading .secondh1 {
         margin-left: 5vw;
