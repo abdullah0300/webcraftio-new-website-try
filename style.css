@@ -706,6 +706,9 @@ body {
         transform: translateX(100vw) translateY(100vh);
     }
 }
+
+
+
 .custom-chat-button {
     position: fixed; /* Keeps the button fixed relative to the viewport */
     right: 10px; /* 10px from the right side */
@@ -713,16 +716,51 @@ body {
     transform: translateY(-50%); /* Fine-tuning to ensure it stays in the middle */
     background-color: #ffffff; /* Button background color */
     color: rgb(19, 16, 16); /* Text color */
-    padding: 10px 15px; /* Button padding */
+    padding: 5px 10px; /* Button padding */
     border: none;
     border-radius: 11px; /* Rounded corners */
     font-size: 12px; /* Text size */
     text-transform: uppercase; /* Uppercase text */
     white-space: nowrap; /* Prevent text wrapping */
-    writing-mode: vertical-lr; /* Change this to make text face left */
+    writing-mode: vertical-lr; /* Rotate text vertically */
     text-align: center; /* Center the vertical text */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
     z-index: 999; /* Ensures the button is above other elements */
+    display: flex;
+    align-items: center; /* Ensures the dot and text are aligned */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for transforming text */
+}
+
+.custom-chat-button::before {
+    content: ""; /* No text content */
+    width: 10px; /* Width of the dot */
+    height: 10px; /* Height of the dot */
+    background-color: #4CAF50; /* Green color */
+    border-radius: 50%; /* Circular dot */
+    margin-right: 1px; /* Spacing between the dot and the text */
+    margin-bottom: 5px;
+}
+
+/* The full text initially */
+.chat-text {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    display: inline-block; /* Ensures text is inline-block for transition effects */
+    opacity: 1; /* Ensure text is visible */
+    visibility: visible; /* Ensure visibility stays on */
+}
+
+/* When the user interacts, change text */
+.chat-text.changed {
+    opacity: 0; /* Fade out the text */
+    transform: translateX(-100%); /* Slide the text out to the left */
+    visibility: hidden; /* Hide text when animation is finished */
+}
+
+/* After fade-out, show the "Chat" text */
+.chat-text.final {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Reset position */
 }
 
 /* Hover effect */

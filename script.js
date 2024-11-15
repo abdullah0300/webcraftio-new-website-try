@@ -273,3 +273,34 @@ document.addEventListener('DOMContentLoaded', function () {
         starsContainer.appendChild(star);
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const chatButton = document.querySelector('.custom-chat-button');
+    const chatText = document.querySelector('.chat-text');
+
+    // Function to update the text after interaction
+    function updateChatText() {
+        // Change to just "Chat"
+        chatText.textContent = "Chat";
+        chatText.classList.add("changed"); // Apply the fade-out animation
+        setTimeout(() => {
+            chatText.classList.add("final"); // Apply final visibility and reset position
+        }, 500); // Wait for the fade-out to finish
+    }
+
+    // Detect when user scrolls or moves the cursor
+    function onUserInteraction() {
+        if (!chatText.classList.contains("changed")) {
+            chatText.classList.add("changed"); // Fade out and change text
+            setTimeout(() => {
+                chatText.textContent = "Chat"; // Set the text after the fade-out
+                chatText.classList.add("final"); // Apply final state for "Chat"
+            }, 500); // Wait for the fade-out to finish
+        }
+    }
+
+    // Listen for mouse movement or scroll
+    window.addEventListener('mousemove', onUserInteraction);
+    window.addEventListener('scroll', onUserInteraction);
+});
