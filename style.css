@@ -631,7 +631,7 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
     .nav a {
         font-size: 4vw;
     }
@@ -641,7 +641,6 @@ body {
         font-size: 18vw;
         line-height: 1;
         letter-spacing: 0;
-        margin-bottom: 20px;
     }
      .from-btm h5 {
         margin-top: 20px;
