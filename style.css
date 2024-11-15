@@ -501,7 +501,9 @@ body {
         transition: transform .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         transform: translateY(-100%);
     }
-
+.based{
+    margin-top: 10px;
+}
     .mobile-nav h3,
     .mobile-nav a {
         color: var(--black);
@@ -634,8 +636,11 @@ body {
     .nav a {
         font-size: 4vw;
     }
-
+.heading{
+    margin-top: 40px;
+}
     .heading h1 {
+        
         font-size: 18vw;
         line-height: 1;
         letter-spacing: 0;
