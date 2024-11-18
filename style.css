@@ -196,7 +196,7 @@ body {
 .heading h5 {
     user-select: none;
     text-transform: uppercase;
-    margin-left: 55vw;
+    margin-left: 5vw;
     font-size: 1vw;
     line-height: 3vw;
     opacity: .9;
@@ -213,7 +213,7 @@ body {
 }
 
 .small-headings h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .herofooter {
     display: flex;
