@@ -381,6 +381,7 @@ body {
     }
 
     .page2 p {
+        margin-top: 20px;
         font-size: 3.5vw;
     }
 }
