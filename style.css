@@ -285,11 +285,10 @@ body {
 }
 
 /********************* page 2 *******************************/
-
 .page2 {
     width: 100%;
-    padding-inline: 3vw 10vw;
-    padding-block: 1vw;
+    padding-inline: 5vw; /* Adjusted for smaller devices */
+    padding-block: 2vw; /* Slightly increased for better spacing */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -298,39 +297,36 @@ body {
 .elem {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3vw 0;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: center; /* Center them vertically */
+    padding: 4vw 0; /* Increased padding for better spacing on touch devices */
     border-top: 1px solid var(--gray);
 }
 
 .page2 p {
-    /* position: relative; */
-    /* display: flex; */
-    
-    align-items: center;
-    justify-content: space-between;
-    padding: 3vw 0;
-    /* border-top: 1px solid var(--gray); */
     color: white;
-    margin-bottom: 60px;
-    font-size: 1.5vw;
+    margin-bottom: 20px; /* Reduced margin for smaller screens */
+    font-size: 4vw; /* Use vw for scaling font sizes */
+    line-height: 1.4; /* Improve readability on smaller screens */
 }
 
 .last-elem {
     border-bottom: 1px solid var(--gray);
 }
-.set{
-        border-top: 1px solid var(--gray);
 
+.set {
+    border-top: 1px solid var(--gray);
 }
+
 .page2 .elem h1 {
     transition: all .5s ease-in-out;
     color: var(--white);
-    font-size: 8vw;
+    font-size: 10vw; /* Increase scaling for smaller screens */
     opacity: .7;
     pointer-events: none;
-    margin-top: 60px;
+    margin-top: 30px; /* Reduced for better spacing */
+    text-align: center; /* Center text */
 }
 
 .elem:hover h1 {
@@ -343,13 +339,13 @@ body {
     opacity: .7;
     color: var(--white);
     pointer-events: none;
+    font-size: 5vw; /* Scale for mobile */
 }
 
 .page2 .elem h4 {
-    /* transition: all .5s ease-in-out; */
     opacity: .7;
     color: var(--white);
-    /* pointer-events: none; */
+    font-size: 4vw; /* Adjusted for small screens */
 }
 
 .elem:hover h3 {
@@ -359,14 +355,36 @@ body {
 .page2 img {
     opacity: 0;
     pointer-events: none;
-    height: 120%;
-    bottom: -200px;
-    left: 20%;
+    height: 100%; /* Adjust image height for smaller screens */
+    bottom: -100px; /* Adjust positioning */
+    left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 20px;
+    border-radius: 15px; /* Reduced border radius */
     position: absolute;
     z-index: 99;
 }
+
+/* Media Query for devices with max width of 768px (small screens) */
+@media (max-width: 768px) {
+    .elem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page2 .elem h1 {
+        font-size: 12vw;
+    }
+
+    .page2 .elem h3, 
+    .page2 .elem h4 {
+        font-size: 6vw;
+    }
+
+    .page2 p {
+        font-size: 5vw;
+    }
+}
+
 
 /********************* page 3 *******************************/
 
