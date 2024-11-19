@@ -366,6 +366,9 @@ body {
 
 /* Media Query for devices with max width of 768px (small screens) */
 @media (max-width: 768px) {
+    .small-headings{
+        text-align: left;
+    }
     .elem {
         flex-direction: column;
         align-items: flex-start;
