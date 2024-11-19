@@ -207,7 +207,7 @@ body {
     flex-direction: column;
     align-items: end;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
     text-transform: uppercase;
     user-select: none;
 }
@@ -289,7 +289,7 @@ body {
 .page2 {
     width: 100%;
     padding-inline: 3vw 10vw;
-    padding-block: 10vw;
+    padding-block: 1vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,16 +304,33 @@ body {
     border-top: 1px solid var(--gray);
 }
 
+.page2 p {
+    /* position: relative; */
+    /* display: flex; */
+    
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 0;
+    /* border-top: 1px solid var(--gray); */
+    color: white;
+    margin-bottom: 60px;
+    font-size: 1.5vw;
+}
+
 .last-elem {
     border-bottom: 1px solid var(--gray);
 }
+.set{
+        border-top: 1px solid var(--gray);
 
+}
 .page2 .elem h1 {
     transition: all .5s ease-in-out;
     color: var(--white);
     font-size: 8vw;
     opacity: .7;
     pointer-events: none;
+    margin-top: 60px;
 }
 
 .elem:hover h1 {
@@ -326,6 +343,13 @@ body {
     opacity: .7;
     color: var(--white);
     pointer-events: none;
+}
+
+.page2 .elem h4 {
+    /* transition: all .5s ease-in-out; */
+    opacity: .7;
+    color: var(--white);
+    /* pointer-events: none; */
 }
 
 .elem:hover h3 {
@@ -349,6 +373,15 @@ body {
 .page3 {
     width: 100%;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0rem 11vw 0vw 3vw;
+}
+.casestudypage1 {
+    width: 100%;
+    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -379,6 +412,7 @@ body {
     align-items: start;
     justify-content: space-between;
     gap: .3rem;
+    margin-top: 40px;
 }
 
 .about h3 {
@@ -571,6 +605,16 @@ body {
         align-items: flex-end;
         padding: 1rem 3vw;
         height: 100vh;
+    }
+
+    .casestudypage1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1rem 3vw;
+        /* height: 100vh; */
     }
 
     .creator {
@@ -788,5 +832,179 @@ body {
         font-size: 10px; /* Further reduce font size */
         padding: 8px 10px; /* Adjust padding for smaller buttons */
         right: 5px; /* Ensure button stays close to the edge */
+    }
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    width: 60vh; /* Adjust card width as needed */
+    height: 60vh; /* Fixed height as per request */
+    overflow: hidden;
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: none;
+    transition: top 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    animation:  imageFloat 4s ease-in-out infinite;
+    top: -100%; /* Move image fully up on hover */
+}
+
+.case-study-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(83, 79, 79);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.case-study-link:hover {
+    background: rgb(39, 36, 36);
+    color: rgb(255, 255, 255);
+}
+
+/* Image Floating Animation */
+@keyframes imageFloat {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: -50%; /* Adjust movement up */
+    }
+}
+
+
+/* Case Study Section */
+.case-study-section {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Case Study Content */
+.case-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.case-study-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    animation: slideUp 1s ease-in-out;
+}
+
+.case-study-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 10px;
+    animation: fadeInText 1s ease-in-out;
+}
+
+.case-study-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.case-study-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    animation: floatImage 3s ease-in-out infinite;
+}
+
+.case-study-block:hover .case-study-image img {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
