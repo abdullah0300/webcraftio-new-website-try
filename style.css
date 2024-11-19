@@ -368,6 +368,7 @@ body {
 @media (max-width: 768px) {
     .small-headings h3{
         text-align: left;
+        align-items: start;
     }
     .elem {
         flex-direction: column;
