@@ -372,7 +372,7 @@ body {
     }
 
     .page2 .elem h1 {
-        font-size: 12vw;
+        font-size: 10vw;
     }
 
     .page2 .elem h3, 
@@ -381,7 +381,7 @@ body {
     }
 
     .page2 p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 }
 
