@@ -366,7 +366,7 @@ body {
 
 /* Media Query for devices with max width of 768px (small screens) */
 @media (max-width: 768px) {
-    .small-headings{
+    .small-headings h3{
         text-align: left;
     }
     .elem {
