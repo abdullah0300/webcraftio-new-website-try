@@ -854,7 +854,6 @@ body {
         right: 5px; /* Ensure button stays close to the edge */
     }
 }
-
 /* Projects Section */
 .projects-section {
     background-color: black;
@@ -873,16 +872,19 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of items */
 }
 
+/* Project Card Styling */
 .project-card {
-    width: 60vh; /* Adjust card width as needed */
-    height: 60vh; /* Fixed height as per request */
+    width: 30%; /* Default width for larger screens */
+    height: 60vh; /* Fixed height for consistency */
     overflow: hidden;
     position: relative;
     background-color: #1a1a1a;
     border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .project-image img {
@@ -896,7 +898,7 @@ body {
 }
 
 .project-card:hover .project-image img {
-    animation:  imageFloat 4s ease-in-out infinite;
+    animation: imageFloat 4s ease-in-out infinite;
     top: -100%; /* Move image fully up on hover */
 }
 
@@ -930,6 +932,43 @@ body {
     }
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        width: 45%; /* Two cards per row on medium screens */
+        height: 50vh; /* Slightly smaller height */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%; /* Full width for mobile devices */
+        height: 40vh; /* Reduced height for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Smaller title font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        flex-direction: column; /* Stack cards vertically on very small screens */
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; /* Full width for mobile screens */
+        height: 35vh; /* Further reduced height for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .case-study-link {
+        font-size: 0.8rem; /* Smaller font for mobile */
+        padding: 5px 8px;
+    }
+}
 
 /* Case Study Section */
 .case-study-section {
