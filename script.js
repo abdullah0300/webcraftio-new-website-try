@@ -173,6 +173,11 @@ gsap.to(".intro", {
     delay: 2.3,
     duration: .2
 });
+gsap.to(".intro1", {
+    y: "-100%",
+    delay: 2.3,
+    duration: .2
+});
 
 function start() {
     gsap.from(".from-top-mobile-nav", {
@@ -303,4 +308,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for mouse movement or scroll
     window.addEventListener('mousemove', onUserInteraction);
     window.addEventListener('scroll', onUserInteraction);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
 });
