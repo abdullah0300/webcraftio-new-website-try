@@ -855,95 +855,120 @@ body {
     }
 }
     /* Projects Section */
-    .projects-section {
-        background-color: black;
-        color: white;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: white;
-    }
-
-    .projects-grid {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap; /* Allow wrapping of items */
-    }
-
-    /* Project Card Styling */
-    /* Projects Section */
 .projects-section {
     background-color: black;
     color: white;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.project-viewer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-card {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 40px 20px;
     text-align: center;
-    background-color: #1a1a1a;
-    transition: transform 1s ease;
-    opacity: 0;
 }
 
-.project-card img {
-    max-height: 70%;
-    max-width: 80%;
-    object-fit: cover;
-    border-radius: 8px;
+.section-title {
+    font-size: 2rem;
     margin-bottom: 20px;
-}
-
-.project-card .case-study-link {
-    font-size: 1.5rem;
     color: white;
-    text-decoration: none;
-    border: 2px solid white;
-    padding: 10px 20px;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+/* Project Card Styling */
+.project-card {
+    width: 30%; /* Default width for larger screens */
+    height: 60vh; /* Fixed height for consistency */
+    overflow: hidden;
+    position: relative;
+    background-color: #1a1a1a;
     border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.project-card .case-study-link:hover {
-    background-color: white;
-    color: black;
+.project-image img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: none;
+    transition: top 0.3s ease;
 }
 
-.project-card.active {
-    transform: translateY(0);
-    opacity: 1;
-    z-index: 1;
+.project-card:hover .project-image img {
+    animation: imageFloat 4s ease-in-out infinite;
+    top: -100%; /* Move image fully up on hover */
 }
 
-.project-card.inactive {
-    transform: translateY(100%);
-    opacity: 0;
-    z-index: 0;
+.case-study-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(83, 79, 79);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
+.case-study-link:hover {
+    background: rgb(39, 36, 36);
+    color: rgb(255, 255, 255);
+}
+
+/* Image Floating Animation */
+@keyframes imageFloat {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: -50%; /* Adjust movement up */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-card {
+        width: 45%; /* Two cards per row on medium screens */
+        height: 50vh; /* Slightly smaller height */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%; /* Full width for mobile devices */
+        height: 40vh; /* Reduced height for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Smaller title font for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        flex-direction: column; /* Stack cards vertically on very small screens */
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; /* Full width for mobile screens */
+        height: 35vh; /* Further reduced height for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .case-study-link {
+        font-size: 0.8rem; /* Smaller font for mobile */
+        padding: 5px 8px;
+    }
+}
 
 
 .blog-section {
