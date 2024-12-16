@@ -1644,12 +1644,12 @@ body {
 @media (max-width: 768px) {
     .grid-item {
        
-        height: 30vh;
+        height: 50vh;
     }
     
     .grid-item img {
        
-        height: 30vh;
+        height: 50vh;
       
     }
     .grid-container {
