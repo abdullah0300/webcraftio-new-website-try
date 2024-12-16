@@ -324,3 +324,26 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+
+
+const steps = document.querySelectorAll('.step');
+          
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.7
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, observerOptions);
+
+steps.forEach(step => {
+  observer.observe(step);
+});

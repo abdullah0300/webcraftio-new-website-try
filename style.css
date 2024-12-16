@@ -1586,3 +1586,343 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: auto; /* Adjust height dynamically */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.grid-item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .info {
+    opacity: 1;
+}
+
+.info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        display: flex; /* Use flex for horizontal scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Enable snapping */
+        scroll-behavior: smooth; /* Enable smooth scrolling */
+    }
+
+    .grid-item {
+        flex: 0 0 80%; /* Each item takes up 80% of the container's width */
+        margin-right: 10px; /* Add spacing between items */
+        scroll-snap-align: start; /* Align items to start when snapping */
+    }
+
+    /* Custom scrollbar */
+    .grid-container::-webkit-scrollbar {
+        height: 8px; /* Set scrollbar height */
+    }
+
+    .grid-container::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.5); /* Scrollbar color */
+        border-radius: 4px; /* Rounded edges */
+    }
+
+    .grid-container::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.1); /* Scrollbar track color */
+    }
+}
+
+
+        /* Scoped styles for the timeline section */
+        .process-timeline-section-wrapper * {
+            box-sizing: border-box;
+        }
+
+        .process-timeline-section-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: #000000;
+            color: #fff;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .process-timeline-section-wrapper .timeline-progress-line {
+            position: fixed;
+            top: 0;
+            left: 60px;
+            width: 2px;
+            height: 100vh;
+            background-color: #333;
+            z-index: 10;
+        }
+
+        .process-timeline-section-wrapper .timeline-progress-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            transition: height 0.3s ease;
+        }
+
+        .process-timeline-section-wrapper .timeline-arrow {
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .process-timeline-section-wrapper .timeline-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .process-timeline-section-wrapper .timeline-step {
+            position: relative;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .process-timeline-section-wrapper .timeline-step:nth-child(1) { margin-left: 0; }
+        .process-timeline-section-wrapper .timeline-step:nth-child(2) { margin-left: 200px; }
+        .process-timeline-section-wrapper .timeline-step:nth-child(3) { margin-left: 400px; }
+
+        .process-timeline-section-wrapper .timeline-step-content {
+            background: #000000;
+            padding: 30px;
+            border: 2px solid #fff;
+            width: 300px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .process-timeline-section-wrapper .timeline-step-content.active {
+            transform: scale(1.05);
+            background-color: #fff;
+            color: #000;
+        }
+
+        .process-timeline-section-wrapper .timeline-line {
+            position: absolute;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        .process-timeline-section-wrapper .timeline-horizontal-line {
+            width: 200px;
+            height: 2px;
+        }
+
+        .process-timeline-section-wrapper .timeline-vertical-line {
+            width: 2px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 200px;
+        }
+
+        .process-timeline-section-wrapper .timeline-step-number {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .process-timeline-section-wrapper .timeline-step-title {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .process-timeline-section-wrapper .timeline-step-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .process-timeline-section-wrapper .timeline-step:nth-child(1) { margin-left: 0; }
+            .process-timeline-section-wrapper .timeline-step:nth-child(2) { margin-left: 150px; }
+            .process-timeline-section-wrapper .timeline-step:nth-child(3) { margin-left: 300px; }
+
+            .process-timeline-section-wrapper .timeline-horizontal-line { width: 150px; }
+            .process-timeline-section-wrapper .timeline-vertical-line { left: 150px; }
+            .process-timeline-section-wrapper .timeline-step-content { width: 250px; }
+        }
+
+        @media (max-width: 767px) {
+            .process-timeline-section-wrapper .timeline-step {
+                padding: 50px 0;
+                margin-left: 50px !important;
+            }
+
+            .process-timeline-section-wrapper .timeline-step-content {
+                width: calc(100vw - 100px);
+                max-width: 300px;
+                padding: 20px;
+            }
+
+            .process-timeline-section-wrapper .timeline-horizontal-line {
+                width: 50px;
+                left: -50px;
+            }
+
+            .process-timeline-section-wrapper .timeline-vertical-line {
+                left: -50px;
+                height: 50px;
+            }
+
+            .process-timeline-section-wrapper .timeline-step-title {
+                font-size: 28px;
+            }
+
+            .process-timeline-section-wrapper .timeline-step-number {
+                font-size: 20px;
+            }
+
+            .process-timeline-section-wrapper .timeline-arrow {
+                left: 20px;
+            }
+
+            .process-timeline-section-wrapper .timeline-progress-line {
+                left: 30px;
+            }
+        }
+   
+   /* process */
+        .process-section {
+          background: #000;
+          color: #fff;
+          padding: 8rem 2rem;
+        }
+        
+        .process-header {
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto 6rem auto;
+        }
+        
+        .process-title {
+          font-size: 3.8rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          margin-bottom: 1.5rem;
+          background: linear-gradient(to right, #fff, #ccc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        
+        .process-subtitle {
+          font-size: 1.4rem;
+          line-height: 1.6;
+          opacity: 0.9;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+        
+        .steps-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .step {
+          width: 100%;
+          max-width: 800px;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 2rem;
+          opacity: 0.3;
+          transition: opacity 0.5s ease;
+        }
+        
+        .step.active {
+          opacity: 1;
+        }
+        
+        .step-number {
+          font-size: 1.5rem;
+          font-weight: 300;
+          letter-spacing: 4px;
+          margin-bottom: 1rem;
+          border: 1px solid #fff;
+          padding: 0.5rem 1.5rem;
+          border-radius: 25px;
+        }
+        
+        .step-title {
+          font-size: 3.5rem;
+          font-weight: 700;
+          margin: 1rem 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        
+        .step-description {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          max-width: 600px;
+          margin: 1rem 0;
+          opacity: 0.8;
+        }
+        
+        .line {
+          width: 2px;
+          height: 80px;
+          background: #fff;
+          margin: 2rem 0;
+          opacity: 0.3;
+        }
+        
