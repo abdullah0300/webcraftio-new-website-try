@@ -1642,6 +1642,16 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .grid-item {
+       
+        height: 70vh;
+    }
+    
+    .grid-item img {
+       
+        height: 70vh;
+      
+    }
     .grid-container {
         display: flex; /* Use flex for horizontal scrolling */
         overflow-x: auto; /* Enable horizontal scrolling */
