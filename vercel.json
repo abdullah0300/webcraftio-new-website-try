@@ -21,8 +21,8 @@
         "destination": "/shopify-plus.html"
       },
       {
-        "source": "/blogs",
-        "destination": "/blogs.html"
+        "source": "/Blogs",
+        "destination": "/Blogs.html"
       }
     ]
   }
