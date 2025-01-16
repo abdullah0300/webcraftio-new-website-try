@@ -13,8 +13,12 @@
         "destination": "/contact.html"
       },
       {
-        "source": "/portfolio",
+        "source": "/work",
         "destination": "/portfolio.html"
+      },
+      {
+        "source": "/shopify-plus",
+        "destination": "/shopify-plus.html"
       }
     ]
   }
