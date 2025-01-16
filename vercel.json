@@ -19,6 +19,10 @@
       {
         "source": "/shopify-plus",
         "destination": "/shopify-plus.html"
+      },
+      {
+        "source": "/blogs",
+        "destination": "/blogs.html"
       }
     ]
   }
