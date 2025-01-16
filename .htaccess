@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Ensure the RewriteBase is set correctly (adjust if your site is in a subdirectory)
+RewriteBase /
+
 # Remove .html extension
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
