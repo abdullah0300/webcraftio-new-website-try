@@ -2558,8 +2558,9 @@ font-weight: bolder;
     animation: shopify-promo-banner__slide-up 0.6s ease-out forwards;
     z-index: 1000;
     width: auto;
-    white-space: nowrap;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .shopify-promo-banner__text {
@@ -2570,11 +2571,16 @@ font-weight: bolder;
     display: flex;
     align-items: center;
     gap: 12px;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.4;
 }
 
 .shopify-promo-banner__highlight a{
-    color: #069c4a;
+    color: #14a320;
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .shopify-promo-banner__close-btn {
@@ -2611,10 +2617,10 @@ font-weight: bolder;
     }
 }
 
-/* Responsive Design */
+/* Improved Responsive Design */
 @media (max-width: 768px) {
     .shopify-promo-banner__container {
-        padding: 0.875rem 1.75rem;
+        padding: 0.875rem 2rem;
         bottom: 15px;
         width: calc(100% - 40px);
         max-width: 500px;
@@ -2629,17 +2635,33 @@ font-weight: bolder;
     .shopify-promo-banner__container {
         padding: 0.75rem 1.5rem;
         bottom: 10px;
-        width: calc(100% - 20px);
-        border-radius: 50px;
+        width: calc(100% - 24px);
+        border-radius: 16px;
+        margin: 0 12px;
     }
 
     .shopify-promo-banner__text {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 8px;
     }
 
     .shopify-promo-banner__close-btn {
         width: 20px;
         height: 20px;
         font-size: 0.875rem;
+        right: 6px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .shopify-promo-banner__container {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .shopify-promo-banner__text {
+        font-size: 0.8rem;
     }
 }
