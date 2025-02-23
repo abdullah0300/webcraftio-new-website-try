@@ -2305,7 +2305,7 @@ font-weight: bolder;
 
 @media (max-width: 768px) {
     .blog-template__article-content p {
-        margin-top: 5vh;
+        margin-top: 10vh;
     }
     .blog-template__article-title {
         font-size: 2rem;
