@@ -2825,8 +2825,7 @@ font-weight: bolder;
 @media (max-width: 768px) {
     .aa-floating-panel {
         right: 15px;
-        width: 52px;
-        height: 52px;
+    
     }
 }
 
