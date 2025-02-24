@@ -2669,3 +2669,128 @@ font-weight: bolder;
         font-size: 0.8rem;
     }
 }
+
+
+/* popup */
+
+.min-popup__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.min-popup__container {
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.min-popup__content {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.min-popup__title {
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.min-popup__accent {
+    color: black;
+    background: linear-gradient(90deg, #f0f0f0, #ffffff);
+    padding: 2px 8px;
+    margin: 0 -2px;
+    border-radius: 3px;
+}
+
+.min-popup__button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+.min-popup__button:hover {
+    transform: translateY(-2px);
+    background-color: #333;
+}
+
+.min-popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 18px;
+    transition: background-color 0.2s ease;
+}
+
+.min-popup__close:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* When popup is visible */
+.min-popup__overlay.is-visible {
+    display: flex;
+    opacity: 1;
+}
+
+.min-popup__overlay.is-visible .min-popup__container {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .min-popup__content {
+        padding: 30px 20px;
+    }
+    
+    .min-popup__title {
+        font-size: 20px;
+    }
+    
+    .min-popup__button {
+        padding: 10px 24px;
+        font-size: 15px;
+        width: 100%;
+    }
+}

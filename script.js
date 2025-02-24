@@ -347,3 +347,28 @@ const observer = new IntersectionObserver((entries) => {
 steps.forEach(step => {
   observer.observe(step);
 });
+
+
+ // Show popup after 20 seconds
+ setTimeout(function() {
+    document.getElementById('consultPopup').classList.add('is-visible');
+}, 15000); // 20 seconds
+
+// Close popup when close button is clicked
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('consultPopup').classList.remove('is-visible');
+});
+
+// Optional: You can add functionality to the schedule button here
+document.getElementById('scheduleButton').addEventListener('click', function() {
+    // Add your scheduling functionality here
+    alert('Taking you to the scheduling page...');
+    window.location.href = 'https://fire.chilipiper.com/me/abdullah-aslam/consultation';
+});
+
+// Close popup when clicking outside the popup (on the overlay)
+document.getElementById('consultPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.remove('is-visible');
+    }
+});
