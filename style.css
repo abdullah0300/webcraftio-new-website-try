@@ -2825,14 +2825,15 @@ font-weight: bolder;
 @media (max-width: 768px) {
     .aa-floating-panel {
         right: 15px;
+        width: 52px;
+        height: 52px;
     }
 }
 
 @media (max-width: 480px) {
     .aa-floating-panel {
         right: 10px;
-        width: 52px;
-        height: 52px;
+       
     }
 }
 
