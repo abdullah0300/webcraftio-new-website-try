@@ -2836,7 +2836,7 @@ font-weight: bolder;
 
 /* For very small screens, move panel to bottom */
 @media (max-width: 380px), (max-height: 480px) {
-    .aa-floating-panel {
+    /* .aa-floating-panel {
         top: auto;
         bottom: 20px;
         right: 20px;
@@ -2849,7 +2849,7 @@ font-weight: bolder;
         right: 0;
         padding: 16px 10px 72px;
         transform-origin: bottom right;
-    }
+    } */
     
     .aa-panel-item:after {
         right: 60px;
