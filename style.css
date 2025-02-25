@@ -2800,6 +2800,33 @@ font-weight: bolder;
     display: none;
 }
 
+/* Popup animation */
+.min-popup__overlay.is-visible .min-popup__container {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Pulse animation for the schedule button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.aa-panel-item[data-tooltip="Schedule"] {
+    animation: none; /* Reset animation */
+}
+
+
+
+
+
+
 /* Rest of your existing CSS */
 .aa-floating-panel {
     --aa-panel-bg: rgba(255, 255, 255, 0.95);
