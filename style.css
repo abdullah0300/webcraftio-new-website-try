@@ -2795,8 +2795,12 @@ font-weight: bolder;
     }
 }
 
+/* Hide the button when the panel is active */
+.aa-floating-panel.aa-active .aa-panel-toggle {
+    display: none;
+}
 
-/* panel */
+/* Rest of your existing CSS */
 .aa-floating-panel {
     --aa-panel-bg: rgba(255, 255, 255, 0.95);
     --aa-panel-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -2825,34 +2829,17 @@ font-weight: bolder;
 @media (max-width: 768px) {
     .aa-floating-panel {
         right: 15px;
-    
     }
 }
 
 @media (max-width: 480px) {
     .aa-floating-panel {
         right: 10px;
-       
     }
 }
 
 /* For very small screens, move panel to bottom */
 @media (max-width: 380px), (max-height: 480px) {
-    /* .aa-floating-panel {
-        top: auto;
-        bottom: 20px;
-        right: 20px;
-        transform: none;
-    }
-    
-    .aa-panel-menu {
-        bottom: 0;
-        top: auto;
-        right: 0;
-        padding: 16px 10px 72px;
-        transform-origin: bottom right;
-    } */
-    
     .aa-panel-item:after {
         right: 60px;
         bottom: 50%;
@@ -2885,7 +2872,6 @@ font-weight: bolder;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     padding: 0;
     margin: 0;
-    margin-right: 5vh;
 }
 
 /* Adjust toggle size for smaller screens */
