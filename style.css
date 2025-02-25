@@ -2803,9 +2803,9 @@ font-weight: bolder;
     --aa-panel-border: rgba(225, 225, 225, 0.8);
     --aa-panel-hover: #f5f5f5;
     --aa-panel-icon: #333;
-    --aa-panel-icon-hover: #0066ff;
-    --aa-toggle-bg: #0066ff;
-    --aa-toggle-icon: white;
+    --aa-panel-icon-hover: #ffffff;
+    --aa-toggle-bg: #ffffff;
+    --aa-toggle-icon: rgb(46, 44, 44);
     --aa-badge-bg: #ff3366;
     --aa-tooltip-bg: rgba(0, 0, 0, 0.8);
     --aa-tooltip-text: white;
@@ -2885,6 +2885,7 @@ font-weight: bolder;
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     padding: 0;
     margin: 0;
+    margin-right: 5vh;
 }
 
 /* Adjust toggle size for smaller screens */
@@ -3127,7 +3128,7 @@ font-weight: bolder;
 
 .aa-chat-btn {
     margin-top: 5px;
-    background-color: rgba(0, 102, 255, 0.08);
+    background-color: white;
 }
 
 /* Enhanced Dark Mode with media query */
