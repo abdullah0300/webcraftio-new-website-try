@@ -2313,7 +2313,7 @@ font-weight: bolder;
         padding: 2rem 1rem;
     }
     
-    .blog-template__article-image {
+    
         .blog-template__article-image {
             min-height: 180px; /* Smaller height for mobile */
             aspect-ratio: 16 / 9;
