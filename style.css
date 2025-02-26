@@ -2200,24 +2200,34 @@ font-weight: bolder;
 .blog-template__article-image {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Ensures it doesn’t get too large on desktop */
-    background: #333;
+    max-height: 400px; /* Prevents excessive height */
+    background: #333; /* Fallback */
     margin-bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #a10505;
-    overflow: hidden; /* Prevents overflow issues */
+    overflow: hidden; /* Ensures no unwanted scrollbars */
+}
+
+.blog-template__article-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible */
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .blog-template__article-image {
-    width: 100%;
-    height: auto;
-    object-fit: contain; 
+        height: auto; /* Let the image dictate the height */
+    }
+
+    .blog-template__article-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures full image visibility */
+    }
 }
-}
+
 
 .blog-template__article-content {
     font-size: 1.1rem;
