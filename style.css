@@ -2314,7 +2314,7 @@ font-weight: bolder;
     }
     
     .blog-template__article-image {
-        height: 250px;
+        height: auto;
         width:auto;
         margin-bottom: 10vh;
         
