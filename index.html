@@ -249,13 +249,14 @@
                     <p>We designed and built this Islamic bookstore, helping Darularqam grow and spread Knowledge.</p>
                 </div>
             </div>
-           
+
             <div class="grid-item">
                 <a href="https://x1yde1-wj.myshopify.com/">
                     <img src="Media/m sajjad .jpg" alt="Project 3"></a>
                 <div class="info">
                     <h3>M Sajjad Beauty</h3>
-                    <p>We designed and built this beauty store, helping M Sajjad Beauty to connect to customers online.</p>
+                    <p>We designed and built this beauty store, helping M Sajjad Beauty to connect to customers online.
+                    </p>
                 </div>
             </div>
 
@@ -267,16 +268,17 @@
                     <p>We designed and built this business site, helping Motorbay become a big success.</p>
                 </div>
             </div>
-             <div class="grid-item">
+            <div class="grid-item">
                 <a href="https://www.nexterix.com/">
                     <img src="Media/nexterix truck.jpg" alt="Project 2"></a>
                 <div class="info">
                     <h3>Nexterix</h3>
-                    <p>We designed and built this business website helping Nexterix to make revolution in trucking industry.
+                    <p>We designed and built this business website helping Nexterix to make revolution in trucking
+                        industry.
                     </p>
                 </div>
             </div>
-            
+
 
             <div class="grid-item">
                 <a href="https://www.avcars.co.uk/">
@@ -379,26 +381,47 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://kit.fontawesome.com/9317aadbca.js" crossorigin="anonymous"></script>
     <!-- Brevo Conversations {literal} -->
-    <script>
-        window.BrevoConversationsSetup = {
-            customWidgetButton: '.custom-chat-button'
-        };
-    </script>
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/686f88d5f8958d190c14773d/1ivpqt0p9'; // Replace with your actual Tawk ID
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
 
-    <!-- Brevo Conversations widget code -->
-    <script>
-        (function (d, w, c) {
-            w.BrevoConversationsID = '68167302da322739fe0aa1fc';
-            w[c] = w[c] || function () {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'BrevoConversations');
+    // Wait for Tawk to be ready and bind your custom chat button
+    document.addEventListener("DOMContentLoaded", function () {
+        var checkTawk = setInterval(function () {
+            if (typeof Tawk_API !== 'undefined' && typeof Tawk_API.maximize === 'function') {
+                clearInterval(checkTawk);
+                var customButton = document.querySelector('.custom-chat-button');
+                if (customButton) {
+                    customButton.addEventListener('click', function () {
+                        Tawk_API.maximize();
+                    });
+                }
+            }
+        }, 300);
+    });
+</script>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/686f88d5f8958d190c14773d/1ivpqt0p9';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
-    <!-- /Brevo Conversations {/literal} -->
+    <!--End of Tawk.to Script-->
 
 
     <script src="script.js"></script>
