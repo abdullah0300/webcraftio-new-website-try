@@ -170,12 +170,12 @@ gsap.from(".footer", {
 
 // AI Services Section Animation
 gsap.from(".ai-service-card", {
-    y: "10%",
+    y: 30,
     duration: 0.6,
     opacity: 0,
     stagger: 0.2,
     scrollTrigger: {
-        trigger: ".ai-services-section",
+        trigger: ".ai-services-wrapper",
         scroller: ".main",
         start: "top 70%",
     }
