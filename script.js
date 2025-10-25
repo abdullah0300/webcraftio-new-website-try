@@ -136,6 +136,17 @@ gsap.from(".about", {
     }
 });
 
+gsap.from(".about-section-new", {
+    y: "20%",
+    duration: .5,
+    opacity: 0,
+    delay: .5,
+    scrollTrigger: {
+        trigger: ".about-section-new",
+        scroller: ".main",
+    }
+});
+
 gsap.from(".subscribe", {
     y: "20%",
     duration: .5,
@@ -385,29 +396,7 @@ if (!localStorage.getItem('popupShown')) {
 // Close popup when close button is clicked
 document.getElementById('closePopup').addEventListener('click', function() {
     const popup = document.getElementById('consultPopup');
-    const panel = document.querySelector('.aa-floating-panel');
-    const scheduleButton = document.querySelector('.aa-panel-item[data-tooltip="Schedule Meeting"]');
-
-    // Add animation to "suck" the popup into the panel
-    popup.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-    const panelRect = panel.getBoundingClientRect();
-    const popupRect = popup.getBoundingClientRect();
-    popup.style.transform = `translate(${panelRect.left - popupRect.left}px, ${panelRect.top - popupRect.top}px) scale(0.1)`;
-    popup.style.opacity = '0';
-
-    // Open the panel and animate the schedule button
-    setTimeout(() => {
-        popup.classList.remove('is-visible');
-        panel.classList.add('aa-active');
-
-        // Animate the schedule button
-        if (scheduleButton) {
-            scheduleButton.style.animation = 'pulse 1s ease-in-out';
-            setTimeout(() => {
-                scheduleButton.style.animation = '';
-            }, 1000);
-        }
-    }, 500); // Wait for the animation to complete before hiding the popup
+    popup.classList.remove('is-visible');
 });
 
 // Optional: Add functionality to the schedule button in the popup
@@ -420,113 +409,4 @@ document.getElementById('consultPopup').addEventListener('click', function(e) {
     if (e.target === this) {
         this.classList.remove('is-visible');
     }
-});
-
-// Panel functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const panel = document.querySelector('.aa-floating-panel');
-    const toggleBtn = document.querySelector('.aa-panel-toggle');
-    
-    // Toggle panel open/close
-    toggleBtn.addEventListener('click', function() {
-        panel.classList.toggle('aa-active');
-        
-        // Haptic-like animation on button click
-        this.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            this.style.transform = '';
-        }, 100);
-    });
-    
-    // Close panel when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!panel.contains(event.target) && panel.classList.contains('aa-active')) {
-            panel.classList.remove('aa-active');
-        }
-    });
-
-    // Add hover effect for panel items
-    const panelItems = document.querySelectorAll('.aa-panel-item');
-    panelItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px)';
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 200);
-        });
-        
-        item.addEventListener('click', function(e) {
-            // Create ripple effect
-            const ripple = document.createElement('span');
-            ripple.classList.add('aa-ripple');
-            this.appendChild(ripple);
-            
-            const x = e.clientX - this.getBoundingClientRect().left;
-            const y = e.clientY - this.getBoundingClientRect().top;
-            
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
-    
-    // Optional: Auto-close after certain period of inactivity
-    let inactivityTimer;
-    function resetInactivityTimer() {
-        clearTimeout(inactivityTimer);
-        if (panel.classList.contains('aa-active')) {
-            inactivityTimer = setTimeout(() => {
-                panel.classList.remove('aa-active');
-            }, 10000); // Close after 10 seconds of inactivity
-        }
-    }
-    
-    document.addEventListener('mousemove', resetInactivityTimer);
-    document.addEventListener('click', resetInactivityTimer);
-    
-    // Make panel draggable
-    let isDragging = false;
-    let dragOffsetY = 0;
-    
-    toggleBtn.addEventListener('mousedown', function(e) {
-        // Don't start drag on regular click (use long press or right-click)
-        if (e.button === 2 || e.ctrlKey) {
-            e.preventDefault();
-            isDragging = true;
-            dragOffsetY = e.clientY - panel.getBoundingClientRect().top;
-            
-            // Change cursor to indicate dragging
-            document.body.style.cursor = 'grabbing';
-            panel.style.transition = 'none';
-        }
-    });
-    
-    document.addEventListener('mousemove', function(e) {
-        if (isDragging) {
-            const y = e.clientY - dragOffsetY;
-            
-            // Keep within viewport bounds
-            const maxY = window.innerHeight - panel.offsetHeight;
-            const boundedY = Math.max(0, Math.min(maxY, y));
-            
-            panel.style.top = boundedY + 'px';
-            panel.style.transform = 'translateY(0)';
-        }
-    });
-    
-    document.addEventListener('mouseup', function() {
-        if (isDragging) {
-            isDragging = false;
-            document.body.style.cursor = '';
-            panel.style.transition = '';
-        }
-    });
-    
-    // Prevent context menu on toggle button for right-click drag
-    toggleBtn.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
 });
