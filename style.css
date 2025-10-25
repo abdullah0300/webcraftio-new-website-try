@@ -2020,22 +2020,40 @@ font-weight: bolder;
     opacity: 0.3;
 }
 
-.service-pricing {
-    font-size: 1.8rem;
+/* AI Services Section - Unique Classes */
+.ai-services-wrapper {
+    background: #000;
+    color: #fff;
+    padding: 8rem 2rem;
+}
+
+.ai-services-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 6rem auto;
+}
+
+.ai-services-title {
+    font-size: 3.8rem;
     font-weight: 700;
-    color: #fdb226;
-    margin: 1.5rem 0;
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* AI Services Section */
-.ai-services-section .step {
-    min-height: auto;
-    opacity: 1;
-    padding: 3rem 2rem;
+.ai-services-subtitle {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ccc;
 }
 
-.ai-services-section .steps-container {
+.ai-services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -2043,9 +2061,84 @@ font-weight: bolder;
     margin: 0 auto;
 }
 
+.ai-service-card {
+    background: #222;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.ai-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: #fdb226;
+}
+
+.ai-service-number {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    display: inline-block;
+    color: #fff;
+}
+
+.ai-service-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.ai-service-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 1rem auto;
+    opacity: 0.8;
+    color: #ccc;
+}
+
+.ai-service-pricing {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fdb226;
+    margin: 1.5rem 0;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 992px) {
-    .ai-services-section .steps-container {
+    .ai-services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .ai-services-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ai-services-wrapper {
+        padding: 4rem 1rem;
+    }
+
+    .ai-services-title {
+        font-size: 2.5rem;
+    }
+
+    .ai-service-card {
+        padding: 30px;
+    }
+
+    .ai-service-title {
+        font-size: 2rem;
     }
 }
 
