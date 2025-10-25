@@ -4491,3 +4491,295 @@ font-weight: bolder;
 .portfolio-awwrd-item:nth-child(12) { animation-delay: 0.65s; }
 .portfolio-awwrd-item:nth-child(13) { animation-delay: 0.7s; }
 .portfolio-awwrd-item:nth-child(14) { animation-delay: 0.75s; }
+
+/* ============================================
+   MODERN CONTACT PAGE
+   ============================================ */
+
+/* Contact Hero */
+.contact-modern-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 150px 2rem 80px 2rem;
+    text-align: center;
+}
+
+.contact-modern-hero-content {
+    max-width: 800px;
+}
+
+.contact-modern-hero-title {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 1.5rem 0;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.contact-modern-hero-subtitle {
+    font-size: 1.3rem;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Contact Section */
+.contact-modern-section {
+    background: #000;
+    padding: 80px 2rem 120px 2rem;
+}
+
+.contact-modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+}
+
+/* Form Wrapper */
+.contact-modern-form-wrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.contact-modern-form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 2rem 0;
+}
+
+.contact-modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-modern-form-group {
+    width: 100%;
+}
+
+.contact-modern-input,
+.contact-modern-textarea {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Albert Sans", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact-modern-input::placeholder,
+.contact-modern-textarea::placeholder {
+    color: #666;
+}
+
+.contact-modern-input:focus,
+.contact-modern-textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-modern-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-modern-submit-btn {
+    padding: 16px 40px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.contact-modern-submit-btn:hover {
+    background: transparent;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Info Wrapper */
+.contact-modern-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-modern-info-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 1rem 0;
+}
+
+/* Contact Cards */
+.contact-modern-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 35px;
+    transition: all 0.3s ease;
+}
+
+.contact-modern-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.contact-modern-card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-modern-card-icon svg {
+    color: #fff;
+}
+
+.contact-modern-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.contact-modern-card-desc {
+    font-size: 1rem;
+    color: #888;
+    margin: 0 0 15px 0;
+}
+
+.contact-modern-card-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-modern-card-link:after {
+    content: '→';
+    margin-left: 8px;
+    transition: margin-left 0.3s ease;
+}
+
+.contact-modern-card-link:hover {
+    color: #fff;
+}
+
+.contact-modern-card-link:hover:after {
+    margin-left: 12px;
+}
+
+/* Response Info */
+.contact-modern-response-info {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact-modern-response-text {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .contact-modern-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-modern-hero-title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-modern-hero {
+        min-height: 50vh;
+        padding: 120px 1.5rem 60px 1.5rem;
+    }
+
+    .contact-modern-hero-title {
+        font-size: 3rem;
+    }
+
+    .contact-modern-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .contact-modern-section {
+        padding: 60px 1.5rem 80px 1.5rem;
+    }
+
+    .contact-modern-form-wrapper {
+        padding: 35px;
+    }
+
+    .contact-modern-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-modern-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-modern-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-modern-form-wrapper {
+        padding: 30px 25px;
+    }
+
+    .contact-modern-form-title {
+        font-size: 1.6rem;
+    }
+
+    .contact-modern-info-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-modern-card {
+        padding: 25px;
+    }
+
+    .contact-modern-submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
