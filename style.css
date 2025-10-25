@@ -2020,6 +2020,58 @@ font-weight: bolder;
     opacity: 0.3;
 }
 
+.service-pricing {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fdb226;
+    margin: 1.5rem 0;
+    letter-spacing: 1px;
+}
+
+/* AI Capabilities Section */
+.ai-capabilities-section {
+    padding-top: 80px;
+}
+
+.capability-card {
+    text-align: left;
+}
+
+.capability-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.capability-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.capability-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.capability-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #fdb226;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.capability-list li:last-child {
+    border-bottom: none;
+}
+
 
 /* blog */
 
