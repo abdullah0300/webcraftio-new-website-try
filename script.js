@@ -136,13 +136,13 @@ gsap.from(".about", {
     }
 });
 
-gsap.from(".whoweare-v2-card", {
+gsap.from(".about-section-new", {
     y: "20%",
     duration: .5,
     opacity: 0,
     delay: .5,
     scrollTrigger: {
-        trigger: ".whoweare-v2-card",
+        trigger: ".about-section-new",
         scroller: ".main",
     }
 });
@@ -410,4 +410,3 @@ document.getElementById('consultPopup').addEventListener('click', function(e) {
         this.classList.remove('is-visible');
     }
 });
-
