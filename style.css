@@ -2318,6 +2318,165 @@ font-weight: bolder;
     }
 }
 
+/* WHO WE ARE Section Redesign - v2 */
+.whoweare-v2-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.whoweare-v2-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 4rem;
+    align-items: start;
+    transition: all 0.3s ease;
+}
+
+.whoweare-v2-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.whoweare-v2-logo-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whoweare-v2-logo-img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.whoweare-v2-card:hover .whoweare-v2-logo-img {
+    transform: scale(1.05);
+}
+
+.whoweare-v2-content-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.whoweare-v2-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.whoweare-v2-headline {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.whoweare-v2-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.whoweare-v2-paragraph {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin: 0;
+}
+
+.whoweare-v2-cta-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.whoweare-v2-cta-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design for WHO WE ARE v2 */
+@media (max-width: 992px) {
+    .whoweare-v2-card {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .whoweare-v2-logo-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .whoweare-v2-headline {
+        font-size: 2.2rem;
+    }
+
+    .whoweare-v2-cta-btn {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .whoweare-v2-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .whoweare-v2-headline {
+        font-size: 1.8rem;
+    }
+
+    .whoweare-v2-paragraph {
+        font-size: 1.05rem;
+    }
+
+    .whoweare-v2-logo-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whoweare-v2-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .whoweare-v2-headline {
+        font-size: 1.5rem;
+    }
+
+    .whoweare-v2-label {
+        font-size: 0.75rem;
+    }
+}
+
 /* AI Technologies Section */
 .ai-tech-section {
     display: block;
