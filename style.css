@@ -4783,3 +4783,255 @@ font-weight: bolder;
         text-align: center;
     }
 }
+
+/* ============================================
+   MODERN NAVBAR
+   ============================================ */
+
+.navbar-modern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-modern.scrolled {
+    background: rgba(0, 0, 0, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-modern-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+/* Logo */
+.navbar-modern-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-modern-logo:hover {
+    transform: translateY(-2px);
+}
+
+.navbar-modern-logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.navbar-modern-logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* Nav Links */
+.navbar-modern-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-modern-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-modern-link:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar-modern-link:hover {
+    color: #fff;
+}
+
+.navbar-modern-link:hover:after {
+    width: 100%;
+}
+
+.navbar-modern-link-active {
+    color: #fff;
+}
+
+.navbar-modern-link-active:after {
+    width: 100%;
+}
+
+/* CTA Button */
+.navbar-modern-cta {
+    padding: 12px 28px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 25px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid #fff;
+}
+
+.navbar-modern-cta:hover {
+    background: transparent;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Toggle */
+.navbar-modern-mobile-toggle {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.navbar-modern-mobile-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-modern-hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-modern-hamburger:before,
+.navbar-modern-hamburger:after {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-modern-hamburger:before {
+    top: -7px;
+}
+
+.navbar-modern-hamburger:after {
+    top: 7px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar-modern-links {
+        display: none;
+    }
+
+    .navbar-modern-mobile-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-modern-container {
+        padding: 0 1.5rem;
+        height: 80px;
+    }
+
+    .navbar-modern-logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar-modern-logo-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-modern-container {
+        padding: 0 1rem;
+        height: 70px;
+    }
+
+    .navbar-modern-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-modern-logo-text {
+        font-size: 1.1rem;
+    }
+
+    .navbar-modern-mobile-toggle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar-modern-hamburger {
+        width: 20px;
+    }
+
+    .navbar-modern-hamburger:before,
+    .navbar-modern-hamburger:after {
+        width: 20px;
+    }
+}
+
+/* Smooth Page Transitions */
+.navbar-modern-link,
+.navbar-modern-cta {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 90px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+}
