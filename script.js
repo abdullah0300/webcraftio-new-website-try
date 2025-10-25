@@ -181,14 +181,14 @@ gsap.from(".ai-service-card", {
     }
 });
 
-// AI Capabilities Section Animation
-gsap.from(".capability-card", {
+// AI Technologies Section Animation
+gsap.from(".ai-tech-item", {
     y: 30,
     duration: 0.5,
     opacity: 0,
     stagger: 0.15,
     scrollTrigger: {
-        trigger: ".ai-capabilities-section",
+        trigger: ".ai-tech-section",
         scroller: ".main",
         start: "top 75%",
     }
