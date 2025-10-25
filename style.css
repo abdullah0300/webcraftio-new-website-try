@@ -2344,12 +2344,25 @@ font-weight: bolder;
 }
 
 .tech-showcase-v2-icon {
-    font-size: 48px !important;
+    width: 60px !important;
+    height: 60px !important;
     margin-bottom: 24px !important;
     line-height: 1 !important;
     position: relative !important;
     z-index: 1 !important;
     display: block !important;
+}
+
+.tech-showcase-v2-icon svg {
+    width: 100% !important;
+    height: 100% !important;
+    stroke: #fff !important;
+    transition: all 0.3s ease !important;
+}
+
+.tech-showcase-v2-card:hover .tech-showcase-v2-icon svg {
+    stroke: #fff !important;
+    transform: scale(1.1) !important;
 }
 
 .tech-showcase-v2-card-title {
@@ -2431,7 +2444,8 @@ font-weight: bolder;
     }
 
     .tech-showcase-v2-icon {
-        font-size: 40px !important;
+        width: 50px !important;
+        height: 50px !important;
         margin-bottom: 20px !important;
     }
 
