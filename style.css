@@ -2073,7 +2073,7 @@ font-weight: bolder;
 .ai-service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: #fdb226;
+    border-color: #fff;
 }
 
 .ai-service-number {
@@ -2106,12 +2106,26 @@ font-weight: bolder;
     color: #ccc;
 }
 
-.ai-service-pricing {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #fdb226;
-    margin: 1.5rem 0;
+.ai-service-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 35px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.ai-service-button:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
 }
 
 @media (max-width: 992px) {
@@ -2142,48 +2156,101 @@ font-weight: bolder;
     }
 }
 
-/* AI Capabilities Section */
-.ai-capabilities-section {
-    padding-top: 80px;
+/* AI Technologies Section */
+.ai-tech-section {
+    background: #000;
+    color: #fff;
+    padding: 8rem 2rem;
 }
 
-.capability-card {
-    text-align: left;
+.ai-tech-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 6rem auto;
 }
 
-.capability-card h3 {
-    font-size: 1.5rem;
+.ai-tech-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 1.5rem;
     color: #fff;
 }
 
-.capability-list {
-    list-style: none;
-    padding: 0;
+.ai-tech-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ai-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ai-tech-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.ai-tech-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ai-tech-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ai-tech-item p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #ccc;
     margin: 0;
 }
 
-.capability-list li {
-    padding: 0.75rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: #ccc;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+@media (max-width: 992px) {
+    .ai-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-tech-title {
+        font-size: 2.8rem;
+    }
 }
 
-.capability-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #fdb226;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+@media (max-width: 768px) {
+    .ai-tech-section {
+        padding: 4rem 1rem;
+    }
 
-.capability-list li:last-child {
-    border-bottom: none;
+    .ai-tech-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .ai-tech-title {
+        font-size: 2.2rem;
+    }
+
+    .ai-tech-item {
+        padding: 30px 25px;
+    }
 }
 
 
@@ -3406,4 +3473,279 @@ font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* About Us Page Styling */
+.about-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 3vw 50px 3vw;
+    background: #000;
+}
+
+.about-hero-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-hero-content p {
+    font-size: 1.5rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-story {
+    background: #000;
+    padding: 8rem 3vw;
+}
+
+.about-story-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-story-header h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about-story-content p {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.about-values {
+    background: #000;
+    padding: 6rem 3vw;
+}
+
+.about-values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-values-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.about-value-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-value-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.about-value-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin: 0;
+}
+
+.about-team {
+    background: #000;
+    padding: 6rem 3vw;
+}
+
+.about-team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-team-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about-team-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ccc;
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.about-team-member {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 35px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.about-team-member:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.about-team-role {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.about-team-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin: 0;
+}
+
+.about-cta {
+    background: #000;
+    padding: 8rem 3vw;
+    text-align: center;
+}
+
+.about-cta-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.about-cta-content p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+}
+
+.about-cta-button {
+    display: inline-block;
+    padding: 18px 45px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.about-cta-button:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .about-hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-story-header h2,
+    .about-values-title,
+    .about-team-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-story {
+        padding: 4rem 20px;
+    }
+
+    .about-story-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-story-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cta-content h2 {
+        font-size: 2.5rem;
+    }
 }
