@@ -168,6 +168,32 @@ gsap.from(".footer", {
     }
 });
 
+// AI Services Section Animation
+gsap.from(".ai-service-card", {
+    y: "10%",
+    duration: 0.6,
+    opacity: 0,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: ".ai-services-section",
+        scroller: ".main",
+        start: "top 70%",
+    }
+});
+
+// AI Capabilities Section Animation
+gsap.from(".capability-card", {
+    y: 30,
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.15,
+    scrollTrigger: {
+        trigger: ".ai-capabilities-section",
+        scroller: ".main",
+        start: "top 75%",
+    }
+});
+
 gsap.to(".intro", {
     y: "-100%",
     delay: 2.3,

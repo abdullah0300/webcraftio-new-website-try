@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="XmDBI3IYHHup62vJWdYQbzG1G-3bCNri6QiLOLSC_mA" />
+    <title>AI Development Pricing UK | Fixed-Price Quotes | WebCraftio</title>
+    <meta name="description"
+        content="Transparent pricing for AI chatbot development, AI-enhanced websites, and business automation. Fixed-price quotes from £3,000. No hidden fees.">
+    <meta name="keywords"
+        content="AI development pricing UK, chatbot cost, AI website price, UK AI agency rates, fixed price AI development">
+    <link rel="icon" type="image/x-icon" href="Media/webcraftio logo.png ">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://www.webcraftio.com/pricing" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G62SKWN4DV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-G62SKWN4DV');
+    </script>
+    <style>
+        .pricing-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 3vw 50px 3vw;
+        }
+
+        .pricing-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .pricing-hero p {
+            font-size: 1.4rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pricing-section {
+            padding: 60px 3vw;
+            background: #000;
+        }
+
+        .pricing-category {
+            margin-bottom: 80px;
+        }
+
+        .pricing-category h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .pricing-tier {
+            background: #222;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-tier:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #fdb226;
+        }
+
+        .pricing-tier.featured {
+            border: 2px solid #fdb226;
+            transform: scale(1.05);
+        }
+
+        .pricing-tier.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #fdb226;
+            color: #000;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .pricing-tier h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fdb226;
+            margin: 1.5rem 0;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #fdb226;
+            font-weight: bold;
+        }
+
+        .pricing-tier button {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-tier button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .ongoing-support {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            color: #ccc;
+            margin-top: 30px;
+        }
+
+        .ongoing-support strong {
+            color: #fdb226;
+        }
+
+        .included-section {
+            padding: 80px 3vw;
+            background: #000;
+        }
+
+        .included-section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .included-item {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .included-item:hover {
+            transform: translateY(-10px);
+            border-color: #fdb226;
+        }
+
+        .included-item .icon {
+            font-size: 3rem;
+            color: #fdb226;
+            margin-bottom: 1rem;
+        }
+
+        .included-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .included-item p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .pricing-cta {
+            padding: 100px 3vw;
+            text-align: center;
+            background: #000;
+        }
+
+        .pricing-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .pricing-cta p {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-cta a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #fdb226;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-cta a:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .pricing-tiers {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-tier.featured {
+                transform: scale(1);
+            }
+
+            .pricing-tier.featured:hover {
+                transform: translateY(-10px);
+            }
+
+            .included-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .pricing-hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="nav from-top-1">
+        <a href="/"> <img src="Media/webcraftio logo white.png" alt="WebCraftio Logo"
+                style="height: 100px;width: 100px;"></a>
+        <h3 class="from-top-1-ele underline" href="/">WebCraftio</h3>
+        <div>
+            <div class="display-none nav-links">
+                <a class="underline" href="/about">About Us</a>
+                <a class="underline" href="/shopify-plus">Shopify Plus</a>
+                <a class="underline" href="/services">Services</a>
+                <a class="underline" href="/work">Work</a>
+                <a class="underline" href="/contact">Contact</a>
+            </div>
+            <a class="from-top-1-ele menu-btn underline" href="#"
+                style="background-color: white;padding: 10px; border-radius: 20px;color: black;">MENU+</a>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <!-- Pricing Hero -->
+        <section class="pricing-hero">
+            <div>
+                <h1>Pricing That Makes Sense</h1>
+                <p>Fixed-price AI solutions with no hidden fees. Know exactly what you're paying for.</p>
+            </div>
+        </section>
+
+        <!-- AI Chatbot Pricing -->
+        <section class="pricing-section">
+            <div class="pricing-category">
+                <h2>🤖 AI Chatbot Development</h2>
+
+                <div class="pricing-tiers">
+                    <div class="pricing-tier">
+                        <h3>Basic FAQ Bot</h3>
+                        <div class="price">£3,000 - £8,000</div>
+                        <ul class="features-list">
+                            <li>Simple question-answer system</li>
+                            <li>Pre-defined conversation flows</li>
+                            <li>Basic web widget integration</li>
+                            <li>Email notifications</li>
+                            <li>30-day support included</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier featured">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <h3>Customer Service Bot</h3>
+                        <div class="price">£10,000 - £20,000</div>
+                        <ul class="features-list">
+                            <li>Natural language processing</li>
+                            <li>CRM integration</li>
+                            <li>Multi-channel support (web, WhatsApp)</li>
+                            <li>Analytics dashboard</li>
+                            <li>3 months support included</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier">
+                        <h3>Advanced AI Agent</h3>
+                        <div class="price">£25,000 - £50,000</div>
+                        <ul class="features-list">
+                            <li>Voice-enabled ordering system</li>
+                            <li>Complex integrations (POS, payment)</li>
+                            <li>Custom AI training on your data</li>
+                            <li>Phone & web support</li>
+                            <li>6 months support + maintenance</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="ongoing-support">
+                    <strong>Ongoing Support:</strong> £300-£1,500/month for hosting, monitoring, and updates
+                </div>
+            </div>
+
+            <!-- Website Development Pricing -->
+            <div class="pricing-category">
+                <h2>🌐 Website Development</h2>
+
+                <div class="pricing-tiers">
+                    <div class="pricing-tier">
+                        <h3>Professional Business Site</h3>
+                        <div class="price">£5,000 - £15,000</div>
+                        <ul class="features-list">
+                            <li>Custom design (10-20 pages)</li>
+                            <li>Mobile-responsive</li>
+                            <li>SEO optimization</li>
+                            <li>Contact forms & integrations</li>
+                            <li>30-day support</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier">
+                        <h3>E-commerce Store</h3>
+                        <div class="price">£10,000 - £25,000</div>
+                        <ul class="features-list">
+                            <li>Full shopping cart system</li>
+                            <li>Payment gateway integration</li>
+                            <li>Inventory management</li>
+                            <li>Customer accounts</li>
+                            <li>3 months support</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier">
+                        <h3>Custom Web Application</h3>
+                        <div class="price">£20,000 - £50,000</div>
+                        <ul class="features-list">
+                            <li>Bespoke functionality</li>
+                            <li>Database architecture</li>
+                            <li>API development</li>
+                            <li>Admin dashboard</li>
+                            <li>6 months support</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="ongoing-support">
+                    <strong>Monthly Maintenance:</strong> £200-£600/month for updates, security, and hosting
+                </div>
+            </div>
+
+            <!-- AI-Enhanced Websites -->
+            <div class="pricing-category">
+                <h2>✨ AI-Enhanced Websites</h2>
+
+                <div class="pricing-tiers">
+                    <div class="pricing-tier">
+                        <h3>Website + AI Chatbot</h3>
+                        <div class="price">£8,000 - £20,000</div>
+                        <ul class="features-list">
+                            <li>Professional website</li>
+                            <li>Integrated AI chatbot</li>
+                            <li>Lead capture automation</li>
+                            <li>Combined hosting & support</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier featured">
+                        <div class="popular-badge">BEST VALUE</div>
+                        <h3>E-commerce + AI</h3>
+                        <div class="price">£15,000 - £35,000</div>
+                        <ul class="features-list">
+                            <li>Full e-commerce platform</li>
+                            <li>Smart product recommendations</li>
+                            <li>AI customer support</li>
+                            <li>Inventory predictions</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+
+                    <div class="pricing-tier">
+                        <h3>Full AI Integration</h3>
+                        <div class="price">£25,000 - £60,000</div>
+                        <ul class="features-list">
+                            <li>Custom web application</li>
+                            <li>Advanced AI features</li>
+                            <li>Predictive analytics</li>
+                            <li>Multi-system integrations</li>
+                        </ul>
+                        <button onclick="window.location.href='#brevoConversationsExpanded'">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="ongoing-support">
+                    <strong>Monthly AI Support:</strong> £400-£1,000/month for AI hosting, monitoring, and improvements
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included -->
+        <section class="included-section">
+            <h2>Every Project Includes</h2>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>Free Consultation</h3>
+                    <p>Detailed project scoping and technical planning before you commit</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>Fixed-Price Quote</h3>
+                    <p>No surprises. You know exactly what you're paying before we start</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>Post-Launch Support</h3>
+                    <p>30-90 days of support after delivery depending on project size</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>Source Code Ownership</h3>
+                    <p>You own everything we build. Full code ownership and documentation</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>Training & Documentation</h3>
+                    <p>Complete training on how to use and maintain your new system</p>
+                </div>
+
+                <div class="included-item">
+                    <div class="icon">✓</div>
+                    <h3>ROI Tracking</h3>
+                    <p>Analytics setup to measure the real business impact of your investment</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="pricing-cta">
+            <h2>Ready to Start Your AI Project?</h2>
+            <p>Book a free consultation and get a custom quote based on your specific needs</p>
+            <a href="#brevoConversationsExpanded">Schedule Free Consultation</a>
+        </section>
+
+        <div class="footer">
+            <div class="footer-l">
+                <h4>2024 WebCraftio. All Rights Reserved<i class="fa-regular fa-copyright"></i></h4>
+                <h4 class="time"></h4>
+            </div>
+            <div class="footer-r" style="margin-bottom: 20px;">
+                <a class="underline" href="/Blogs">blogs</a>
+                <a class="underline" href="https://www.linkedin.com/company/webcraftio/">linkedin</a>
+                <a class="underline" href="https://www.facebook.com/profile.php?id=61559293647811">Facebook</a>
+                <a class="underline" href="https://www.instagram.com/webcraftio_com/">instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://kit.fontawesome.com/9317aadbca.js" crossorigin="anonymous"></script>
+
+    <!-- Brevo Conversations -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/686f88d5f8958d190c14773d/1ivpqt0p9';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
