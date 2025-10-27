@@ -178,9 +178,8 @@ function initFormSubmission() {
         }
 
         try {
-            // OPTION 1: Send to your API endpoint
-            // Replace '/api/submit-lead' with your actual endpoint
-            const response = await fetch('/api/submit-lead', {
+            // Send to Formspree endpoint
+            const response = await fetch('https://formspree.io/f/mqageqgv', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -197,15 +196,7 @@ function initFormSubmission() {
 
         } catch (error) {
             console.error('Form submission error:', error);
-
-            // FALLBACK: Try alternative submission method
-            // You can use FormSpree, Basin, or email fallback
-            try {
-                await sendViaAlternative(data);
-                handleFormSuccess(form, submitBtn, successMessage, originalText, data);
-            } catch (fallbackError) {
-                handleFormError(submitBtn, errorMessage, originalText);
-            }
+            handleFormError(submitBtn, errorMessage, originalText);
         }
     });
 }
