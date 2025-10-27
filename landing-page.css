@@ -1,0 +1,904 @@
+/* ============================================
+   LANDING PAGE CSS - MATCHING WEBCRAFTIO DESIGN
+   ============================================ */
+
+/* Global Landing Page Styles */
+.landing-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+/* Hide existing navigation */
+.landing-page nav,
+.landing-page header.main-header,
+.landing-page .nav,
+.landing-page .mobile-nav {
+    display: none !important;
+}
+
+/* Container */
+.lp-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3vw;
+}
+
+/* Section Spacing */
+.lp-hero-section,
+.lp-results-section,
+.lp-case-study-section,
+.lp-how-it-works-section,
+.lp-pricing-section,
+.lp-trust-section,
+.lp-form-section,
+.lp-final-cta-section {
+    padding: 100px 0;
+    background: #000;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.lp-hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.lp-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.lp-badge-icon {
+    font-size: 1.2rem;
+}
+
+.lp-hero-title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.lp-hero-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.lp-hero-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.lp-benefit-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lp-benefit-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.lp-benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.lp-benefit-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* CTA Button */
+.lp-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 3.5rem;
+    font-size: 1.25rem;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+}
+
+.lp-cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3);
+}
+
+.lp-cta-arrow {
+    transition: transform 0.3s ease;
+}
+
+.lp-cta-primary:hover .lp-cta-arrow {
+    transform: translateX(5px);
+}
+
+.lp-trust-line {
+    margin-top: 2rem;
+    font-size: 1.0625rem;
+    opacity: 0.7;
+}
+
+/* ============================================
+   RESULTS SECTION
+   ============================================ */
+
+.lp-results-section {
+    background: #000;
+}
+
+.lp-section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: -1px;
+}
+
+.lp-section-title.left-aligned {
+    text-align: left;
+}
+
+.lp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.lp-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.lp-stat-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lp-stat-number {
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.lp-stat-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.lp-stat-detail {
+    font-size: 0.9375rem;
+    opacity: 0.6;
+}
+
+/* ============================================
+   CASE STUDY SECTION
+   ============================================ */
+
+.lp-case-study-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.lp-case-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lp-case-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.lp-case-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.lp-problem-solution {
+    margin: 2rem 0;
+}
+
+.lp-ps-item {
+    margin-bottom: 2rem;
+}
+
+.lp-ps-label {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.lp-results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.lp-results-list li {
+    padding: 0.5rem 0;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+.lp-tech-stack {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.lp-tech-badge {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   HOW IT WORKS SECTION
+   ============================================ */
+
+.lp-section-intro {
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lp-process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.lp-step-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.lp-step-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lp-step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.lp-step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lp-step-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.lp-step-timeline {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 0.8125rem;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+/* ============================================
+   PRICING SECTION
+   ============================================ */
+
+.lp-pricing-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.lp-pricing-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.lp-pricing-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lp-pricing-card.lp-featured {
+    border: 2px solid #fff;
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+}
+
+.lp-popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #000;
+    padding: 0.4rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.lp-pricing-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+.lp-pricing-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lp-price {
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+.lp-pricing-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.lp-pricing-features li {
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.0625rem;
+}
+
+.lp-pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.lp-included-box {
+    margin-top: 4rem;
+    padding: 2.5rem 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.lp-included-box strong {
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   TRUST SECTION
+   ============================================ */
+
+.lp-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.lp-trust-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.lp-trust-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lp-trust-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.lp-trust-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lp-trust-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   FORM SECTION - MOST CRITICAL
+   ============================================ */
+
+.lp-form-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 6rem 0;
+}
+
+.lp-form-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lp-form-intro-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.lp-form-benefits {
+    margin: 2rem 0;
+}
+
+.lp-form-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    margin-bottom: 1.125rem;
+    font-size: 1.0625rem;
+}
+
+.lp-benefit-check {
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Form Fields */
+.lp-form-group {
+    margin-bottom: 1.75rem;
+}
+
+.lp-form-group label {
+    display: block;
+    margin-bottom: 0.625rem;
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.lp-form-input,
+.lp-form-select,
+.lp-form-textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Albert Sans', sans-serif;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.lp-form-input::placeholder,
+.lp-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.lp-form-input:focus,
+.lp-form-select:focus,
+.lp-form-textarea:focus {
+    outline: none;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.lp-form-select {
+    cursor: pointer;
+}
+
+.lp-form-textarea {
+    resize: vertical;
+}
+
+.lp-form-submit {
+    width: 100%;
+    padding: 1.375rem;
+    font-size: 1.125rem;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+.lp-form-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+.lp-button-arrow {
+    transition: transform 0.3s ease;
+}
+
+.lp-form-submit:hover .lp-button-arrow {
+    transform: translateX(5px);
+}
+
+.lp-form-footer {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.6;
+    margin-top: 1.25rem;
+}
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+
+.lp-final-cta-section {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.lp-final-cta-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 4rem 3rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lp-final-cta-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.lp-urgency-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 1rem 1.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 2rem 0;
+    font-size: 0.9375rem;
+}
+
+.lp-urgency-icon {
+    font-size: 1.25rem;
+}
+
+.lp-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.lp-cta-secondary:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.lp-alt-contact {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    opacity: 0.7;
+}
+
+.lp-alt-contact a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.lp-footer {
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lp-footer-logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.lp-footer-tagline,
+.lp-footer-contact {
+    margin: 0.75rem 0;
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.lp-footer-legal {
+    font-size: 0.875rem;
+    opacity: 0.5;
+    margin-top: 1.5rem;
+}
+
+.lp-footer-legal a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+    .lp-hero-title {
+        font-size: 3.5rem;
+    }
+
+    .lp-hero-benefits,
+    .lp-stats-grid,
+    .lp-trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lp-process-steps,
+    .lp-pricing-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lp-case-study-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .lp-form-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+    .lp-section-title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lp-hero-section {
+        min-height: auto;
+        padding: 5rem 0;
+    }
+
+    .lp-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .lp-hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .lp-hero-benefits,
+    .lp-stats-grid,
+    .lp-process-steps,
+    .lp-pricing-options,
+    .lp-trust-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .lp-pricing-card.lp-featured {
+        transform: scale(1);
+    }
+
+    .lp-form-wrapper {
+        padding: 2rem;
+    }
+
+    .lp-stat-number {
+        font-size: 3.5rem;
+    }
+
+    .lp-price {
+        font-size: 2.25rem;
+    }
+
+    .lp-cta-primary {
+        padding: 1.125rem 2.5rem;
+        font-size: 1.125rem;
+    }
+
+    .lp-section-title {
+        font-size: 2.25rem;
+    }
+
+    .lp-container {
+        padding: 0 5vw;
+    }
+
+    .lp-hero-section,
+    .lp-results-section,
+    .lp-case-study-section,
+    .lp-how-it-works-section,
+    .lp-pricing-section,
+    .lp-trust-section,
+    .lp-final-cta-section {
+        padding: 60px 0;
+    }
+
+    .lp-form-section {
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .lp-hero-title {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+
+    .lp-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .lp-cta-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .lp-section-title {
+        font-size: 1.875rem;
+    }
+
+    .lp-benefit-item,
+    .lp-stat-card,
+    .lp-step-card,
+    .lp-pricing-card,
+    .lp-trust-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .lp-form-wrapper {
+        padding: 1.5rem;
+    }
+}
