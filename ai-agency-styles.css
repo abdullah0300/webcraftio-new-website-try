@@ -915,6 +915,26 @@ textarea.aa-form-input {
     color: var(--color-light-gray);
 }
 
+.aa-trust-item-clickable {
+    transition: all 0.3s ease;
+}
+
+.aa-trust-item-clickable:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.aa-trust-item a {
+    color: var(--color-white);
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.aa-trust-item a:hover {
+    opacity: 0.8;
+}
+
 /* ===== SECTION 8: FINAL CTA ===== */
 .aa-final-cta-section {
     padding: var(--section-padding) var(--container-padding);
