@@ -218,13 +218,10 @@ function handleFormSuccess(form, submitBtn, successMessage, originalText, data) 
 
     // Track conversion in Google Ads
     if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17682757490', // Google Ads Conversion ID
-            'event_category': 'Lead Generation',
-            'event_label': 'Form Submitted',
-            'value': 1.0,
-            'currency': 'GBP'
-        });
+        // Call the conversion tracking function
+        if (typeof gtag_report_conversion !== 'undefined') {
+            gtag_report_conversion();
+        }
 
         // Also track as general form submission
         gtag('event', 'generate_lead', {

@@ -815,6 +815,13 @@ html {
 
 select.aa-form-input {
     cursor: pointer;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+select.aa-form-input option {
+    color: #000000;
+    background: #ffffff;
 }
 
 textarea.aa-form-input {
