@@ -39,13 +39,13 @@ html {
     overflow-x: hidden;
 }
 
-/* ===== NAVIGATION STYLES ===== */
+/* ===== LANDING PAGE NAVIGATION STYLES (Unique Classes) ===== */
 
 /* Desktop Navigation */
-.nav {
+.lp-nav {
     background-color: var(--color-black);
     position: fixed;
-    z-index: 999;
+    z-index: 2;
     top: 0;
     width: 100%;
     height: 10%;
@@ -55,10 +55,10 @@ html {
     justify-content: space-between;
 }
 
-.nav h3,
-.nav a,
-.mobile-nav h3,
-.mobile-nav a {
+.lp-nav h3,
+.lp-nav a,
+.lp-mobile-nav h3,
+.lp-mobile-nav a {
     color: var(--color-white);
     text-decoration: none;
     opacity: 1;
@@ -66,24 +66,24 @@ html {
     user-select: none;
 }
 
-.nav div {
+.lp-nav div {
     display: flex;
 }
 
-.nav div div {
+.lp-nav div div {
     display: flex;
     gap: 3vw;
 }
 
 /* Underline Effect */
-.underline {
+.lp-underline {
     position: relative;
     overflow: hidden;
     padding-block: 2px;
     text-decoration: none;
 }
 
-.underline::after {
+.lp-underline::after {
     content: "";
     width: 100%;
     height: 1px;
@@ -96,101 +96,99 @@ html {
     transform-origin: bottom right;
 }
 
-.underline:hover::after {
+.lp-underline:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
 }
 
 /* Utility Classes */
-.display-none {
+.lp-display-none {
     display: none !important;
 }
 
-/* Mobile Navigation */
-.mobile-nav {
-    width: 100%;
-    height: 100dvh;
-    background-color: var(--color-gray);
-    position: fixed;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    transform: translateY(-100%);
-}
-
-.mobile-nav h3,
-.mobile-nav a {
-    color: var(--color-black);
-}
-
-.mobile-nav-top {
-    padding-inline: 4vw;
-    border-bottom: 1px solid var(--color-white);
-    height: 8vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.mobile-nav-top div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    font-size: .9rem;
-}
-
-.mobile-nav-items {
-    padding-inline: 3vw;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    font-size: 8vw;
-    text-transform: uppercase;
-}
-
-.mobile-nav-items div {
-    overflow: hidden;
-    width: 100%;
-    padding-block: .5rem;
-}
-
-.mobile-nav-links {
-    color: var(--color-black);
-    text-decoration: none;
-    font-weight: 900;
-}
-
-.mobile-nav-bottom {
-    font-size: .9rem;
-    padding-inline: 4vw;
-    border-top: 1px solid var(--color-white);
-    height: 8vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.mobile-nav-bottom div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.lp-from-top-1 {
     overflow: hidden;
 }
 
-.from-top-mobile-nav {
-    overflow: hidden;
-}
+/* Mobile Navigation - Responsive */
+@media screen and (max-width: 769px) {
+    .lp-mobile-nav {
+        width: 100%;
+        height: 100dvh;
+        background-color: var(--color-gray);
+        position: fixed;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transform: translateY(-100%);
+    }
 
-.close-btn {
-    cursor: pointer;
-}
+    .lp-mobile-nav h3,
+    .lp-mobile-nav a {
+        color: var(--color-black);
+    }
 
-.menu-btn {
-    cursor: pointer;
+    .lp-mobile-nav-top {
+        padding-inline: 4vw;
+        border-bottom: 1px solid var(--color-white);
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .lp-mobile-nav-top div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        font-size: .9rem;
+    }
+
+    .lp-mobile-nav-items {
+        padding-inline: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        font-size: 8vw;
+        text-transform: uppercase;
+    }
+
+    .lp-mobile-nav-items div {
+        overflow: hidden;
+        width: 100%;
+        padding-block: .5rem;
+    }
+
+    .lp-mobile-nav-links {
+        color: var(--color-black);
+        text-decoration: none;
+        font-weight: 900;
+    }
+
+    .lp-mobile-nav-bottom {
+        font-size: .9rem;
+        padding-inline: 4vw;
+        border-top: 1px solid var(--color-white);
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .lp-mobile-nav-bottom div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .lp-from-top-mobile-nav {
+        overflow: hidden;
+    }
 }
 
 /* ===== SECTION 1: HERO ===== */
