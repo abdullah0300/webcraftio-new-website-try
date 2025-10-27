@@ -46,7 +46,7 @@ function initScrollAnimations() {
 
     // Observe all animated elements
     const animatedElements = document.querySelectorAll(
-        '.aa-pain-card, .aa-benefit-card, .aa-step, .aa-pricing-card, ' +
+        '.aa-pain-card, .aa-step, .aa-pricing-card, ' +
         '.aa-case-study-featured, .aa-mini-case'
     );
 
