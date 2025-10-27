@@ -27,6 +27,10 @@
       {
         "source": "/ai-chatbot-quote",
         "destination": "/ai-chatbot-quote.html"
+      },
+      {
+        "source": "/ai-agency",
+        "destination": "/ai-agency-landing.html"
       }
     ]
   }
