@@ -23,6 +23,10 @@
       {
         "source": "/Blogs",
         "destination": "/Blogs.html"
+      },
+      {
+        "source": "/ai-chatbot-quote",
+        "destination": "/ai-chatbot-quote.html"
       }
     ]
   }
