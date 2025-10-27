@@ -225,10 +225,10 @@ function handleFormSuccess(form, submitBtn, successMessage, originalText, data) 
     // Scroll to success message
     successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Track conversion in Google Analytics
+    // Track conversion in Google Ads
     if (typeof gtag !== 'undefined') {
         gtag('event', 'conversion', {
-            'send_to': 'AW-XXXXXXX/XXXXXXXXXX', // REPLACE WITH YOUR CONVERSION ID
+            'send_to': 'AW-17682757490', // Google Ads Conversion ID
             'event_category': 'Lead Generation',
             'event_label': 'Form Submitted',
             'value': 1.0,
