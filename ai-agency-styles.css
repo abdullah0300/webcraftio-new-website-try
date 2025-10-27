@@ -39,14 +39,6 @@ html {
     overflow-x: hidden;
 }
 
-/* Hide any existing navigation from main site */
-.landing-page-body nav,
-.landing-page-body .nav,
-.landing-page-body .mobile-nav,
-.landing-page-body header.main-header {
-    display: none !important;
-}
-
 /* ===== SECTION 1: HERO ===== */
 .aa-hero-section {
     min-height: 100vh;
@@ -56,6 +48,7 @@ html {
     justify-content: center;
     position: relative;
     padding: 2vh var(--container-padding);
+    padding-top: 150px; /* Account for navbar */
     background: var(--color-black);
 }
 
@@ -67,15 +60,8 @@ html {
     position: relative;
 }
 
-.aa-hero-logo {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    z-index: 10;
-}
-
 .aa-hero-content {
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 .aa-hero-title {
@@ -246,55 +232,7 @@ html {
     color: var(--color-light-gray);
 }
 
-/* ===== SECTION 3: SOLUTION/BENEFITS ===== */
-.aa-solution-section {
-    padding: var(--section-padding) var(--container-padding);
-    background: #0a0a0a; /* Slightly different shade for visual separation */
-}
-
-.aa-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin-top: 4rem;
-}
-
-.aa-benefit-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 2.5rem 2rem;
-    text-align: center;
-    transition: transform var(--transition-standard), box-shadow var(--transition-standard), border-color var(--transition-standard);
-}
-
-.aa-benefit-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.aa-benefit-icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1;
-}
-
-.aa-benefit-card h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--color-white);
-}
-
-.aa-benefit-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.75;
-    color: var(--color-light-gray);
-}
-
-/* ===== SECTION 4: CASE STUDIES ===== */
+/* ===== SECTION 3: CASE STUDIES ===== */
 .aa-case-studies-section {
     padding: var(--section-padding) var(--container-padding);
     background: var(--color-black);
@@ -907,7 +845,6 @@ textarea.aa-form-input {
 
 /* Stagger animation for grids */
 .aa-pain-card,
-.aa-benefit-card,
 .aa-step,
 .aa-pricing-card {
     opacity: 0;
@@ -915,10 +852,6 @@ textarea.aa-form-input {
 }
 
 .aa-pain-card.animate-in {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.aa-benefit-card.animate-in {
     animation: fadeInUp 0.6s ease forwards;
 }
 
@@ -934,13 +867,6 @@ textarea.aa-form-input {
 .aa-pain-card:nth-child(1) { animation-delay: 0.1s; }
 .aa-pain-card:nth-child(2) { animation-delay: 0.2s; }
 .aa-pain-card:nth-child(3) { animation-delay: 0.3s; }
-
-.aa-benefit-card:nth-child(1) { animation-delay: 0.1s; }
-.aa-benefit-card:nth-child(2) { animation-delay: 0.2s; }
-.aa-benefit-card:nth-child(3) { animation-delay: 0.3s; }
-.aa-benefit-card:nth-child(4) { animation-delay: 0.1s; }
-.aa-benefit-card:nth-child(5) { animation-delay: 0.2s; }
-.aa-benefit-card:nth-child(6) { animation-delay: 0.3s; }
 
 .aa-step:nth-child(1) { animation-delay: 0.1s; }
 .aa-step:nth-child(2) { animation-delay: 0.2s; }
@@ -963,8 +889,7 @@ textarea.aa-form-input {
         font-size: clamp(2.5rem, 7vw, 4.5rem);
     }
 
-    .aa-pain-grid,
-    .aa-benefits-grid {
+    .aa-pain-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
@@ -1053,14 +978,12 @@ textarea.aa-form-input {
         font-size: 1.1rem;
     }
 
-    .aa-pain-grid,
-    .aa-benefits-grid {
+    .aa-pain-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
-    .aa-pain-card,
-    .aa-benefit-card {
+    .aa-pain-card {
         padding: 2rem 1.5rem;
     }
 

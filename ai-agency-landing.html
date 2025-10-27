@@ -36,14 +36,55 @@
 </head>
 <body class="landing-page-body">
 
+    <!-- NAVIGATION BAR -->
+    <div class="mobile-nav display-none">
+        <div class="mobile-nav-top">
+            <div>
+                <h3 class="from-top-mobile-nav" href="/">WebCraftio</h3>
+                <a class="from-top-mobile-nav close-btn underline" href="#">CLOSE</a>
+            </div>
+        </div>
+        <div class="mobile-nav-items">
+            <div>
+                <a class="mobile-nav-links" href="/">Home</a>
+            </div>
+            <div>
+                <a class="mobile-nav-links" href="/about">About Us</a>
+            </div>
+            <div>
+                <a class="mobile-nav-links" href="/services">Services</a>
+            </div>
+            <div>
+                <a class="mobile-nav-links" href="/work">Work</a>
+            </div>
+            <div>
+                <a class="mobile-nav-links" href="/contact">Contact</a>
+            </div>
+        </div>
+        <div class="mobile-nav-bottom">
+            <div>
+                <h4 class="time from-btm-mobile-nav"></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav from-top-1">
+        <a href="/"> <img src="Media/webcraftio logo white.png" alt="WebCraftio Logo" style="height: 100px; width: 100px;"></a>
+        <h3 class="from-top-1-ele underline" href="/">WebCraftio</h3>
+        <div>
+            <div class="display-none nav-links">
+                <a class="underline" href="/about">About Us</a>
+                <a class="underline" href="/services">Services</a>
+                <a class="underline" href="/work">Work</a>
+                <a class="underline" href="/contact">Contact</a>
+            </div>
+            <a class="from-top-1-ele menu-btn underline" href="#" style="background-color: white; padding: 10px; border-radius: 20px; color: black;">MENU+</a>
+        </div>
+    </div>
+
     <!-- SECTION 1: HERO (Above the Fold) -->
     <section class="aa-hero-section" id="hero">
         <div class="aa-hero-container">
-            <!-- Logo (small, top left) -->
-            <div class="aa-hero-logo">
-                <img src="Media/webcraftio logo white.png" alt="WebCraftio" style="height: 40px; width: auto;">
-            </div>
-
             <!-- Main Headline -->
             <div class="aa-hero-content">
                 <h1 class="aa-hero-title">Custom AI Development<br>for UK Businesses</h1>
@@ -116,62 +157,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: SOLUTION/WHAT WE DO -->
-    <section class="aa-solution-section" id="solution">
-        <div class="aa-section-container">
-            <h2 class="aa-section-title">We Build AI That Actually Works for Your Business</h2>
-            <p class="aa-section-intro">
-                Not generic chatbots. Not off-the-shelf software.<br>
-                Custom AI solutions designed specifically for YOUR business needs.
-            </p>
-
-            <div class="aa-benefits-grid">
-                <!-- Benefit 1 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">🤖</div>
-                    <h3>Custom AI Development</h3>
-                    <p>Bespoke solutions built from scratch to solve your specific challenges</p>
-                </div>
-
-                <!-- Benefit 2 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">🎯</div>
-                    <h3>Industry-Specific Expertise</h3>
-                    <p>Experience building AI for restaurants, SaaS, e-commerce, and more</p>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">⚡</div>
-                    <h3>Fast Implementation</h3>
-                    <p>From concept to deployment in 2-12 weeks, not months or years</p>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">💰</div>
-                    <h3>Fixed-Price Projects</h3>
-                    <p>Clear pricing upfront. No surprise costs or hidden fees</p>
-                </div>
-
-                <!-- Benefit 5 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">🇬🇧</div>
-                    <h3>UK-Based Team</h3>
-                    <p>Local support, clear communication, no language barriers</p>
-                </div>
-
-                <!-- Benefit 6 -->
-                <div class="aa-benefit-card">
-                    <div class="aa-benefit-icon">📈</div>
-                    <h3>Proven ROI</h3>
-                    <p>Our AI solutions typically pay for themselves within 3-6 months</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: CASE STUDIES (FEATURED PROJECTS) -->
+    <!-- SECTION 3: CASE STUDIES (FEATURED PROJECTS) -->
     <section class="aa-case-studies-section" id="case-studies">
         <div class="aa-section-container">
             <h2 class="aa-section-title">AI Solutions We've Built</h2>
@@ -588,7 +574,21 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="script.js"></script>
     <script src="ai-agency-script.js"></script>
+
+    <!-- Tawk.to Live Chat -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/686f88d5f8958d190c14773d/1ivpqt0p9';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
 
 </body>
 </html>
