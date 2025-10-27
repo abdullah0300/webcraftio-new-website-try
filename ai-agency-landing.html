@@ -35,6 +35,24 @@
       gtag('config', 'AW-17682757490');
     </script>
 
+    <!-- Event snippet for Website lead (1) conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17682757490/04quCJXi4bQbEPLu5e9B',
+            'value': 1.0,
+            'currency': 'PKR',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+
     <!-- Google Analytics - Replace with your ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
