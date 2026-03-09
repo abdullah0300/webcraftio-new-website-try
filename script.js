@@ -270,17 +270,22 @@ function time() {
     var a = 0
     setInterval(function () {
         a += Math.floor(Math.random() * 20)
-        if (a < 100) {
-            document.querySelector(".timer").innerHTML = a + "%"
-        } else {
-            a = 100
-            document.querySelector(".timer").innerHTML = a + "%"
+        const timerEl = document.querySelector(".timer");
+        if (timerEl) {
+            if (a < 100) {
+                timerEl.innerHTML = a + "%"
+            } else {
+                a = 100
+                timerEl.innerHTML = a + "%"
+            }
         }
     }, 200);
 }
 // Create a number of stars for the stars container
 document.addEventListener('DOMContentLoaded', function () {
     const starsContainer = document.querySelector('.stars');
+    if (!starsContainer) return; // Exit if stars container doesn't exist
+    
     const numStars = 100; // Number of stars you want
 
     // Function to create and animate stars
@@ -303,12 +308,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // Append the star to the stars container
         starsContainer.appendChild(star);
     }
-});
+})
 
 
 document.addEventListener('DOMContentLoaded', function() {
     const chatButton = document.querySelector('.custom-chat-button');
     const chatText = document.querySelector('.chat-text');
+
+    if (!chatText || !chatButton) return; // Exit if elements don't exist (e.g., on Blogs page)
 
     // Function to update the text after interaction
     function updateChatText() {
