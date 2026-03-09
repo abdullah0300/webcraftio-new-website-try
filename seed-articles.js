@@ -135,34 +135,7 @@ const posts = [
         children: [
           {
             _type: 'span',
-            text: 'For e-commerce specifically, AI can boost conversion rates through personalized product recommendations, automated customer support, and intelligent inventory management. Our clients typically see:'
-          }
-        ]
-      },
-      {
-        _type: 'block',
-        children: [
-          {
-            _type: 'span',
-            text: '• 25-35% increase in average order value through personalized recommendations'
-          }
-        ]
-      },
-      {
-        _type: 'block',
-        children: [
-          {
-            _type: 'span',
-            text: '• 50% reduction in customer service tickets via AI chatbots'
-          }
-        ]
-      },
-      {
-        _type: 'block',
-        children: [
-          {
-            _type: 'span',
-            text: '• 30% improvement in inventory turnover with predictive analytics'
+            text: 'For e-commerce specifically, AI can boost conversion rates through personalized product recommendations, automated customer support, and intelligent inventory management. Our clients typically see: 25-35% increase in average order value through personalized recommendations, 50% reduction in customer service tickets via AI chatbots, and 30% improvement in inventory turnover with predictive analytics.'
           }
         ]
       },
