@@ -383,24 +383,30 @@ steps.forEach(step => {
 
 /// Show popup only once across all pages
 if (!localStorage.getItem('popupShown')) {
-    setTimeout(function() {
-        document.getElementById('consultPopup').classList.add('is-visible');
-        localStorage.setItem('popupShown', 'true'); // Mark popup as shown
-    }, 10000); // 10 seconds
+    const consultPopup = document.getElementById('consultPopup');
+    if (consultPopup) {
+        setTimeout(function() {
+            consultPopup.classList.add('is-visible');
+            localStorage.setItem('popupShown', 'true'); // Mark popup as shown
+        }, 10000); // 10 seconds
+    }
 }
 
 // Close popup when close button is clicked
-document.getElementById('closePopup').addEventListener('click', function() {
+const closePopupBtn = document.getElementById('closePopup');
+if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', function() {
     const popup = document.getElementById('consultPopup');
     const panel = document.querySelector('.aa-floating-panel');
     const scheduleButton = document.querySelector('.aa-panel-item[data-tooltip="Schedule Meeting"]');
 
-    // Add animation to "suck" the popup into the panel
-    popup.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-    const panelRect = panel.getBoundingClientRect();
-    const popupRect = popup.getBoundingClientRect();
-    popup.style.transform = `translate(${panelRect.left - popupRect.left}px, ${panelRect.top - popupRect.top}px) scale(0.1)`;
-    popup.style.opacity = '0';
+    if (popup && panel) {
+        // Add animation to "suck" the popup into the panel
+        popup.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+        const panelRect = panel.getBoundingClientRect();
+        const popupRect = popup.getBoundingClientRect();
+        popup.style.transform = `translate(${panelRect.left - popupRect.left}px, ${panelRect.top - popupRect.top}px) scale(0.1)`;
+        popup.style.opacity = '0';
 
     // Open the panel and animate the schedule button
     setTimeout(() => {
@@ -415,12 +421,17 @@ document.getElementById('closePopup').addEventListener('click', function() {
             }, 1000);
         }
     }, 500); // Wait for the animation to complete before hiding the popup
-});
+    }
+    });
+}
 
 // Optional: Add functionality to the schedule button in the popup
-document.getElementById('scheduleButton').addEventListener('click', function() {
-    window.location.href = 'https://fire.chilipiper.com/me/abdullah-aslam/consultation';
-});
+const schedulePopupButton = document.getElementById('scheduleButton');
+if (schedulePopupButton) {
+    schedulePopupButton.addEventListener('click', function() {
+        window.location.href = 'https://fire.chilipiper.com/me/abdullah-aslam/consultation';
+    });
+}
 
 // Close popup when clicking outside the popup (on the overlay)
 document.getElementById('consultPopup').addEventListener('click', function(e) {

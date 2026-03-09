@@ -180,7 +180,7 @@
                 }`;
 
                 const response = await fetch(
-                    `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodeURIComponent(query)}&slug=${encodeURIComponent(slug)}`
+                    `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodeURIComponent(query)}&$slug=${encodeURIComponent(slug)}`
                 );
 
                 if (!response.ok) {
@@ -205,9 +205,13 @@
             }
 
             // Update page title and meta
-            document.title = `${post.title} | WebCraftio`;
-            document.getElementById('post-title').textContent = `${post.title} | WebCraftio`;
-            document.getElementById('post-description').content = post.excerpt || post.title;
+            if (post && post.title) {
+                document.title = `${post.title} | WebCraftio`;
+                const postTitleEl = document.getElementById('post-title');
+                const postDescEl = document.getElementById('post-description');
+                if (postTitleEl) postTitleEl.textContent = `${post.title} | WebCraftio`;
+                if (postDescEl) postDescEl.content = post.excerpt || post.title;
+            }
 
             // Render post content
             const imageUrl = post.mainImage ? urlFor(post.mainImage) : '';
