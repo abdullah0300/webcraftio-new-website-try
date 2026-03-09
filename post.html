@@ -167,7 +167,7 @@
             }
 
             try {
-                const query = `*[_type == "post" && slug.current == $slug][0]{
+                const query = `*[_type == "post" && slug.current == "${slug}"][0]{
                     _id,
                     title,
                     slug,
@@ -180,7 +180,7 @@
                 }`;
 
                 const response = await fetch(
-                    `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodeURIComponent(query)}&$slug=${encodeURIComponent(slug)}`
+                    `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?query=${encodeURIComponent(query)}`
                 );
 
                 if (!response.ok) {

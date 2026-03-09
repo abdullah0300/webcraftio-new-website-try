@@ -434,11 +434,14 @@ if (schedulePopupButton) {
 }
 
 // Close popup when clicking outside the popup (on the overlay)
-document.getElementById('consultPopup').addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.classList.remove('is-visible');
-    }
-});
+const consultPopupEl = document.getElementById('consultPopup');
+if (consultPopupEl) {
+    consultPopupEl.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('is-visible');
+        }
+    });
+}
 
 // Panel functionality
 document.addEventListener('DOMContentLoaded', function() {
